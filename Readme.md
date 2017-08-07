@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Татьяна  Андриянова](https://up.htmlacademy.ru/htmlcss/18/user/422601).
-* Наставник: [Максим Фарига].
+* Наставник: [Максим Фарига](https://htmlacademy.ru/profile/maximfariga).
 
 ---
 
