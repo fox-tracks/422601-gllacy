@@ -3,28 +3,59 @@ body {
     font-family: Tahoma, serif;
     height: 100%;
 }
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: flex-start;
     height: 100%;
+    width: 100%;
 }
-header{
-    border: 2px solid violet; /*убрать обводку*/
+.layout-block{
+    max-width: 1200px;
 }
-main{
+header {
+    border: 2px solid violet; /*убрать обводку*/;    
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+main {
     border: 2px solid red; /*убрать обводку*/
 }
-div.map{
+div.map {
     border: 2px solid yellow; /*убрать обводку*/
     width: 100%;
-    align-self: stretch;  /*проверить*/
 }
-.slider-block{
+.slider-block {
     border: 2px solid green; /*убрать обводку*/
 }
-footer.layout-block{
+footer.layout-block {
     border: 2px solid blue; /*убрать обводку*/
     margin-top: auto;
+}
+.action {
+    margin-left: auto;
+}
+header,
+footer,
+.popular-items,
+.features-items,
+.news-block,
+.bonus {
+    display: flex;
+    width: 100%;
+}
+.features,
+.bonus-item,
+.catalog-item,
+.features-items p,
+.news,
+.subscription {
+    border: 2px solid grey;
+    width: 100%;
+    margin: 0;
+}
+.page-header {
+    border: 2px solid grey;
 }
