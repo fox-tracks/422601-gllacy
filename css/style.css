@@ -1,0 +1,30 @@
+html, 
+body {
+    font-family: Tahoma, serif;
+    height: 100%;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+    height: 100%;
+}
+header{
+    border: 2px solid violet; /*убрать обводку*/
+}
+main{
+    border: 2px solid red; /*убрать обводку*/
+}
+div.map{
+    border: 2px solid yellow; /*убрать обводку*/
+    width: 100%;
+    align-self: stretch;  /*проверить*/
+}
+.slider-block{
+    border: 2px solid green; /*убрать обводку*/
+}
+footer.layout-block{
+    border: 2px solid blue; /*убрать обводку*/
+    margin-top: auto;
+}
