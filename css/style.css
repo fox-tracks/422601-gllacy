@@ -49,13 +49,29 @@ footer,
 .features,
 .bonus-item,
 .catalog-item,
-.features-items p,
 .news,
 .subscription {
     border: 2px solid grey;
     width: 100%;
     margin: 0;
+    box-sizing: border-box;
 }
 .page-header {
     border: 2px solid grey;
+}
+.page-header.info {
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+.features-items {
+    flex-wrap: wrap;
+}
+.features-items p {
+    width: 50%;
+    border: 2px solid grey;
+    box-sizing: border-box;
+}
+footer {
+    justify-content: space-between;
 }
