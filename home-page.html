@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-<!--<link rel="stylesheet" href="css/style.css">--!>
+    <!--<link rel="stylesheet" href="css/style.css">-->
   </head>
   <body>
       <!--здесь будет чекбокс-->
@@ -11,10 +11,10 @@
           <!--обертка-->
         <header class="layout-block">
             <div class="page-header header-logo">
-                <img src="img/header-logo.jpg" alt="Логотип" width="100px" height="50px">
+                <img src="img/header-logo.jpg" alt="Логотип" width="100" height="50">
             </div>
             <nav class="page-header main-nav">
-                <ul>
+                <ul class="main-nav-list">
                     <li class="main-nav-item">
                         <a class="catalog" href="catalog.html">Каталог</a>
                         <ul>
@@ -34,36 +34,37 @@
                 </ul>
             </nav>
             <nav class="page-header action-menu">
-                <ul>
+                <ul class="action-menu-list">
                     <li class="action-menu search">
                         <a href="#">Поиск</a>
-                        <form action="#" metod="get">
+                        <form action="#" method="get">
                             <p>
                                 <label for="search"></label>
-                                <input type="text" id="search" placeholder="Что ищем?">
+                                <input type="search" id="search" placeholder="Что ищем?">
                             </p>
                         </form>
                     </li>
                     <li>
                         <a class="action-menu logon" href="#">Вход</a>
                         <div class="logon-form">
-                            <form action="#" metod="post">
+                            <form action="#" method="post">
                                 <p>
                                     <label for="email"></label>
-                                    <input type="text" id="email" placeholder="Электронная почта">
+                                    <input type="email" id="email" placeholder="Электронная почта">
                                 </p>
                                 <p>
                                     <label for="password"></label>
-                                    <input type="text" id="password" placeholder="Пароль"
-                                </p>    
+                                    <input type="password" id="password" placeholder="Пароль">
+                                </p>
+                                <input type="submit" id="logon-btn" class="btn" value="Войти">   
                             </form>
-                            <div><a href="#" class="btn"><b>Войти</b></a></div>
                             <div><a href="#">Забыли пароль? </a></div>
                             <div><a href="#">Новая регистрация</a></div>
                         </div>
                     </li>  
                     <li>
-                        <a class="action-menu basket" href="#">Корзина</a>
+                        <a class="action-menu basket" href="#">Пусто</a><!--Корзина-->
+                    <!--не понимаю, должен ли этот блок отображаться на главной?
                         <section class="basket-pop-up">
                             <table>
                                 <tr>
@@ -79,7 +80,7 @@
                             </table>
                             <p><b>Итого: 750 руб.</b></p>
                             <div><a href="#" class="btn"><b>Оформить заказ</b></a></div>
-                        </section>
+                        </section>!-->
                     </li>
                 </ul>      
             </nav>
@@ -90,12 +91,13 @@
         </header>
         <main class="layout-block">
             <section class="slider-block">
-                <p>Крем-брюле и пломбир<br>с малиновым джемом</p>
+                <h2 class="hidden">Промо</h2>
+                <p>Крем-брюле и пломбир<br>с малиновым джемом</p><!--Нужно ли тут добавить текст от 2 др слайдов-->
                 <div><a href="#" class="btn"><b>Давайте оба!</b></a></div>
             </section>
-            <sextion class="bonus">
+            <section class="bonus">
                 <h2 class="hidden">Бонусы</h2>
-                    <ul>
+                    <ul class="bonus-list">
                         <li class="bonus-item">
                             <h3>Малинка даром!</h3>
                             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -108,54 +110,48 @@
             </section>
             <section class="popular-items">
                 <h2 class="hidden">Популярные товары</h2>
-                <ul>
-                    <li class="catalog-item">
+                <ul class="popular-items-list">
+                    <li class="popular-item">
                         <p>Хит</p>
-                        <img src="img/hit1.jpg" alt="Хит-1" width="200px" height="200px">
-                        <p class="item-price"
-                            <span>310</span>
-                            <img src="img/rub.svg" alt="Р" width="10px" height="20px">
-                            <span>/кг</span>
-                        </p>
+                        <img src="img/hit1.jpg" alt="Хит-1" width="200" height="200">
+                        <div class="item-price">
+                            <b>310&#8381;/кг</b>
+                        </div>
                         <p><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
                     </li>
-                    <li class="catalog-item">
+                    <li class="popular-item">
                         <p>Хит</p>
-                        <img src="img/hit2.jpg" alt="Хит-2" width="200px" height="200px">
-                        <p class="item-price"
-                            <span>380</span>
-                            <img src="img/rub.svg" alt="Р" width="10px" height="20px">
-                            <span>/кг</span>
-                        </p>
+                        <img src="img/hit2.jpg" alt="Хит-2" width="200" height="200">
+                        <div class="item-price">
+                            <b>380&#8381;/кг</b>
+                        </div>
                         <p><a href="#">Сливочно-кофейное с кусочками шоколада</a></p>
                     </li>
-                    <li class="catalog-item">
+                    <li class="popular-item">
                         <p>Хит</p>
-                        <img src="img/hit3.jpg" alt="Хит-3" width="200px" height="200px">
-                        <p class="item-price"
-                            <span>355</span>
-                            <img src="img/rub.svg" alt="Р" width="10px" height="20px">
-                            <span>/кг</span>
-                        </p>
+                        <img src="img/hit3.jpg" alt="Хит-3" width="200" height="200">
+                        <div class="item-price">
+                            <b>355&#8381;/кг</b>
+                        </div>
                         <p><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
                     </li>
-                    <li class="catalog-item">
+                    <li class="popular-item">
                         <p>Хит</p>
-                        <img src="img/hit4.jpg" alt="Хит-4" width="200px" height="200px">
-                        <p class="item-price"
-                            <span>415</span>
-                            <img src="img/rub.svg" alt="Р" width="10px" height="20px">
-                            <span>/кг</span>
-                        </p>
-                        <p><a href="#">Сливочное крем-брюле с карамельной подливкой<a></p>
+                        <img src="img/hit4.jpg" alt="Хит-4" width="200" height="200">
+                        <div class="item-price">
+                            <b>415&#8381;/кг</b>
+                        </div>
+                        <p><a href="#">Сливочное крем-брюле с карамельной подливкой</a></p>
                     </li>  
                 </ul>          
             </section>
             <section class="features">
                 <h2 class="hidden">Наши преимущества</h2>
                 <h3>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
-                <ul class="features-items">
-                        <li><p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p></li>
+                <ul class="features-list">
+                        <li>
+                            <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+                        </li>
                         <li><p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p></li>
                         <li><p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p></li>
                         <li><p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p></li>
@@ -170,41 +166,69 @@
                 <section class="subscription">
                     <h3 class="hidden">Подписка на рассылку</h3>
                     <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                    <form action="#" metod="post">
-                            <p>
-                                <label for="subscription-email"></label>
-                                <input type="text" id="subscription-email" placeholder="Электронная почта">
-                            </p>
+                    <form action="#" method="post">
+                        <label for="subscription-email"></label>
+                        <input type="email" id="subscription-email" placeholder="Электронная почта">
+                        <input type="submit" id="subcription-btn" class="btn" value="Отправить"> 
                     </form>
                 </section>
             </section>
         </main>
-        <div class="map">
-            <h2 class="hidden">Как нас найти</h2>
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abca6153563289037450550c58947e6fae50a44450db54383c743ea1aa4f9a3e3&amp;width=100%25&amp;height=329&amp;lang=ru_RU&amp;scroll=true"></script>
-            <section class="contacts">
+        <div class="empty">   
+            <div class="address">
                 <h3 class="hidden">Наш адрес</h3>
-                <p>Адрес главного офиса<br>и офлайн магазина:</p>
-                <p><b>ул. Большая Конюшенная<br>19/8, Санкт-Петербург</b></p>
-                <p>Для заказов по телефону:</p>
-                <p><b>8 812 450-25-25</b></p>
-                <p>(с 10 до 20 ежедневно)</p>
-            </section>
-        </div> 
-        <footer class="layout-block">
-            <div class="social-networks">
-                Твитер Инста Фейсбук Вконтакте
-
+                    <p>Адрес главного офиса<br>и офлайн магазина:</p>
+                    <p><b>ул. Большая Конюшенная<br>19/8, Санкт-Петербург</b></p>
+                    <p>Для заказов по телефону:</p>
+                    <p><b>8 812 450-25-25</b></p>
+                    <p>(с 10 до 20 ежедневно)</p>
+                    <div><a href="#" class="btn"><b>Форма обратной связи</b></a></div>
+                    <section class="feedback-form">
+                        <h2 class="hidden">Форма обратной связи</h2>
+                        <p>Мы обязательно Вам ответим!</p>
+                        <span>x</span>
+                        <form action="#" method="post">
+                            <p>
+                                <label for="name"></label>
+                                <input type="text" id="name" placeholder="Как вас зовут?">
+                            </p>
+                            <p>
+                                <label for="email"></label>
+                                <input type="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+                            </p>
+                            <p>
+                                <textarea name="feedback" id="feedback" rows="10" cols="50">Напишите что-нибудь...</textarea>
+                            </p>
+                            <input type="submit" id="feedback-btn" class="btn" value="Отправить">   
+                        </form>
+                    </section>    
             </div>
-            <div class="supplier-info">
+        </div>
+        <section class="contacts">
+            <h2 class="hidden">Как нас найти</h2>            
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abd261882c3547c5dbaa44f50aa8b1938537a9e93e2291b8a8dece025a76fd3af&amp;width=100%25&amp;height=482&amp;lang=ru_RU&amp;scroll=true"></script>
+        </section>
+            <footer class="layout-block">
+            <section class="social-networks">
                 <ul>
-                    <li>Для поставщиков</li>
-                    <li>Наши документы</li>
-                    <li>О производстве</li>
-                    <li>Экологические стандарты</li>
+                    <li><a href="https://twitter.com">Twitter</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://vk.com/">Вконтакте</a></li>
                 </ul>
+            </section>
+            <section class="supplier-info">
+                <ul>
+                    <li><a href="#">Для поставщиков</a></li>
+                    <li><a href="#">Наши документы</a></li>
+                    <li><a href="#">О производстве</a></li>
+                    <li><a href="#">Экологические стандарты</a></li>
+                </ul>
+            </section>
+            <div class="academy">
+                <img src="img/academy-logo.jpg" alt="Логотип Академии" width="40" height="40">
+                <p>Сделано в HTML Academy 2017</p>
             </div>
-            <div class="academy">Сделано в HTML Academy 2017</div>
         </footer>
       </div>
   </body>

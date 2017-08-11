@@ -3,6 +3,12 @@ body {
     font-family: Tahoma, serif;
     height: 100%;
 }
+.hidden {
+    display: none;
+}
+li {
+    list-style-type: none;
+}
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -11,8 +17,10 @@ body {
     height: 100%;
     width: 100%;
 }
-.layout-block{
+.layout-block,
+.empty {
     max-width: 1200px;
+    min-width: 900px;
 }
 header {
     border: 2px solid violet; /*убрать обводку*/;    
@@ -20,58 +28,84 @@ header {
     justify-content: flex-start;
     position: relative;
 }
-main {
-    border: 2px solid red; /*убрать обводку*/
-}
-div.map {
-    border: 2px solid yellow; /*убрать обводку*/
-    width: 100%;
-}
-.slider-block {
-    border: 2px solid green; /*убрать обводку*/
-}
-footer.layout-block {
-    border: 2px solid blue; /*убрать обводку*/
-    margin-top: auto;
-}
-.action {
-    margin-left: auto;
-}
-header,
-footer,
-.popular-items,
-.features-items,
-.news-block,
-.bonus {
-    display: flex;
-    width: 100%;
-}
-.features,
-.bonus-item,
-.catalog-item,
-.news,
-.subscription {
-    border: 2px solid grey;
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-}
 .page-header {
     border: 2px solid grey;
+}
+.action-menu {
+    margin-left: auto;
+}
+.main-nav-list, 
+.action-menu-list {
+    justify-content: space-between;
 }
 .page-header.info {
     position: absolute;
     top: 100%;
     right: 0;
 }
-.features-items {
+main {
+    border: 2px solid red; /*убрать обводку*/
+}
+.slider-block {
+    height: 100px;
+    border: 2px solid green; /*убрать обводку*/
+}
+header,
+footer,
+.empty,
+.popular-items-list,
+.features-list,
+.news-block,
+.bonus-list,
+.main-nav-list, 
+.action-menu-list {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.features,
+.bonus-item,
+.popular-item,
+.news,
+.subscription,
+.features-list li {
+    border: 2px solid grey;
+    margin: 0;
+    box-sizing: border-box;
+}
+.features,
+.bonus-item,
+.popular-item,
+.news,
+.subscription {
+    width: 100%;
+}
+.features-list li {
+    width: 50%;
+}
+.features-list {
     flex-wrap: wrap;
 }
-.features-items p {
-    width: 50%;
+section.contacts {
+    width: 100%;
+}
+.empty{
+    height: 0px;
+    position: relative; 
+}
+.address {
+    position: absolute;
+    top: 50px;
+    right: 5%;
     border: 2px solid grey;
-    box-sizing: border-box;
+    z-index: 1;
 }
 footer {
     justify-content: space-between;
 }
+footer.layout-block {
+    border: 2px solid blue; /*убрать обводку*/
+    margin-top: auto;
+}
+
