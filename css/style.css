@@ -3,9 +3,9 @@ body {
     font-family: Tahoma, serif;
     height: 100%;
 }
-.hidden {
+/*--.hidden {
     display: none;
-}
+}--*/
 li {
     list-style-type: none;
 }
@@ -18,7 +18,7 @@ li {
     width: 100%;
 }
 .layout-block,
-.empty {
+.zero {
     max-width: 1200px;
     min-width: 900px;
 }
@@ -52,7 +52,7 @@ main {
 }
 header,
 footer,
-.empty,
+.zero,
 .popular-items-list,
 .features-list,
 .news-block,
@@ -90,7 +90,7 @@ footer,
 section.contacts {
     width: 100%;
 }
-.empty{
+.zero{
     height: 0px;
     position: relative; 
 }
@@ -107,5 +107,9 @@ footer {
 footer.layout-block {
     border: 2px solid blue; /*убрать обводку*/
     margin-top: auto;
+}
+
+.feedback input {
+    display: block;
 }
 

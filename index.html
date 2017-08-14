@@ -55,7 +55,7 @@
                                     <input type="password" id="password" placeholder="Пароль">
                                     <input type="submit" id="login-btn" class="btn" value="Войти">
                                     <div>
-                                        <a href="#">Забыли пароль? </a>
+                                        <a href="#">Забыли пароль? </a><br>
                                         <a href="#">Новая регистрация</a>
                                     </div>
                                 </form>
@@ -72,7 +72,7 @@
                 </nav>
             </div>
         </header>
-        <main class="layout-block">
+        <main>
             <section class="slider">
                 <div class="layout-block">
                     <h2 class="hidden">Промо</h2>
@@ -109,7 +109,7 @@
             <section class="popular-items">
                 <div class="layout-block">
                     <h2 class="hidden">Популярные товары</h2>
-                    <article class="popular-item">
+                    <article class="catalog-item">
                         <a href="#" class="item-container"><img src="img/item1.jpg" alt="Хит-1" width="200" height="200"></a>
                         <div class="item-price">
                             <span>310</span>&#8381;/кг
@@ -117,7 +117,7 @@
                         <p><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
                         <a href="#" class="btn">Быстрый просмотр</a>
                     </article>
-                    <article class="popular-item">
+                    <article class="catalog-item">
                         <a href="#" class="item-container"><img src="img/item2.jpg" alt="Хит-2" width="200" height="200"></a>
                         <div class="item-price">
                             <span>380</span>&#8381;/кг
@@ -125,7 +125,7 @@
                         <p><a href="#">Сливочно-кофейное с кусочками шоколада</a></p>
                         <a href="#" class="btn">Быстрый просмотр</a>
                     </article>
-                    <article class="popular-item">
+                    <article class="catalog-item">
                         <a href="#" class="item-container"><img src="img/item3.jpg" alt="Хит-3" width="200" height="200"></a>
                         <div class="item-price">
                             <span>355</span>&#8381;/кг
@@ -133,7 +133,7 @@
                         <p><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
                         <a href="#" class="btn">Быстрый просмотр</a>
                     </article>
-                    <article class="popular-item">
+                    <article class="catalog-item">
                         <a href="#" class="item-container"><img src="img/item4.jpg" alt="Хит-4" width="200" height="200"></a>
                         <div class="item-price">
                             <span>415</span>&#8381;/кг
@@ -167,7 +167,7 @@
                     <h2 class="hidden">Наши новости</h2>
                     <article class="news">
                         <h3>Новое в нашем блоге</h3>
-                        <a>10 способов сервировки фруктовых щербетов к столу</a><!-- Лучше <p> -->
+                        <a href="#">10 способов сервировки фруктовых щербетов к столу</a><!-- Лучше <p> -->
                     </article>
                     <section class="subscription">
                         <h3 class="hidden">Подписка на рассылку</h3>
@@ -184,7 +184,7 @@
             </section>
             <section class="map">
                 <h2 class="hidden">Как нас найти</h2>
-                <div class="layout-block zero"><!--Хочу все же оставить позициионирование плашки с адресом к блоку с нулевой высотой-->
+                <div class="layout-block zero"><!--Будет позициионирование плашки .address к блоку .layout-block.zero с нулевой высотой-->
                     <div class="address">
                         <h3 class="hidden">Наш адрес</h3>
                         <p>Адрес главного офиса<br>и офлайн магазина:</p>
@@ -197,18 +197,18 @@
                             <h2 class="hidden">Форма обратной связи</h2>
                             <p>Мы обязательно Вам ответим!</p>
                             <button type="button">Закрыть</button>
-                            <form action="#" method="post">
+                            <form action="#" method="post" class="feedback">
                                 <label>
-                                    <span class="placeholder name">Как вас зовут?</span>
-                                    <input type="text" name="name" id="name">
+                                    <span class="placeholder feedback-name">Как вас зовут?</span>
+                                    <input type="text" name="feedback-name" id="name">
                                 </label>
                                 <label>
                                     <span class="placeholder feedback-email">Ваша почта для ответа?</span>
                                     <input type="email" name="feedback-email" id="feedback-email">
                                 </label>
                                 <p>
-                                    <span class="feedback">Напишите что-нибудь...</span>
-                                    <textarea name="feedback" id="feedback" rows="10" cols="50"></textarea>
+                                    <span class="feedback-area">Напишите что-нибудь...</span>
+                                    <textarea name="feedback-area" id="feedback-area" rows="10" cols="50"></textarea>
                                 </p>
                                 <input type="submit" id="feedback-btn" class="btn" value="Отправить">
                             </form>
@@ -218,22 +218,24 @@
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abd261882c3547c5dbaa44f50aa8b1938537a9e93e2291b8a8dece025a76fd3af&amp;width=100%25&amp;height=482&amp;lang=ru_RU&amp;scroll=true"></script>
             </section>
         </main>
-        <footer class="layout-block">
-            <ul class="social-networks">
-                <li><a href="https://twitter.com">Twitter</a></li>
-                <li><a href="https://www.instagram.com">Instagram</a></li>
-                <li><a href="https://www.facebook.com/">Facebook</a></li>
-                <li><a href="https://vk.com/">Вконтакте</a></li>
-            </ul>
-            <ul class="supplier-info">
-                <li><a href="#">Для поставщиков</a></li>
-                <li><a href="#">Наши документы</a></li>
-                <li><a href="#">О производстве</a></li>
-                <li><a href="#">Экологические стандарты</a></li>
-            </ul>
-            <div class="academy">
-                <a href="https://htmlacademy.ru/"><img src="img/academy-logo.jpg" alt="Логотип Академии" width="40" height="40"></a>
-                <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a><span>&#169;</span><span>2017</span></p>
+        <footer>
+            <div class="layout-block">
+                <ul class="social-networks">
+                    <li><a href="https://twitter.com">Twitter</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://vk.com/">Вконтакте</a></li>
+                </ul>
+                <ul class="supplier-info">
+                    <li><a href="#">Для поставщиков</a></li>
+                    <li><a href="#">Наши документы</a></li>
+                    <li><a href="#">О производстве</a></li>
+                    <li><a href="#">Экологические стандарты</a></li>
+                </ul>
+                <div class="academy">
+                    <a href="https://htmlacademy.ru/"><img src="img/academy-logo.jpg" alt="Логотип Академии" width="40" height="40"></a>
+                    <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a><span>&#169;</span><span>2017</span></p>
+                </div>
             </div>
         </footer>
     </div>
