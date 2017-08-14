@@ -26,19 +26,19 @@ header {
     border: 2px solid violet; /*убрать обводку*/;    
     display: flex;
     justify-content: flex-start;
-    position: relative;
 }
-.page-header {
+header div {
     border: 2px solid grey;
 }
 .action-menu {
     margin-left: auto;
+    position: relative;
 }
 .main-nav-list, 
 .action-menu-list {
     justify-content: space-between;
 }
-.page-header.info {
+.action-menu .info {
     position: absolute;
     top: 100%;
     right: 0;
