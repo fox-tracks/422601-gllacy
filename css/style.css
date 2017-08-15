@@ -3,9 +3,9 @@ body {
     font-family: Tahoma, serif;
     height: 100%;
 }
-/*--.hidden {
+/*.hidden {
     display: none;
-}--*/
+}
 li {
     list-style-type: none;
 }
@@ -23,7 +23,7 @@ li {
     min-width: 900px;
 }
 header {
-    border: 2px solid violet; /*убрать обводку*/;    
+    border: 2px solid violet;    
     display: flex;
     justify-content: flex-start;
 }
@@ -44,11 +44,11 @@ header div {
     right: 0;
 }
 main {
-    border: 2px solid red; /*убрать обводку*/
+    border: 2px solid red; 
 }
 .slider-block {
     height: 100px;
-    border: 2px solid green; /*убрать обводку*/
+    border: 2px solid green;
 }
 header,
 footer,
@@ -105,11 +105,18 @@ footer {
     justify-content: space-between;
 }
 footer.layout-block {
-    border: 2px solid blue; /*убрать обводку*/
+    border: 2px solid blue;
     margin-top: auto;
 }
 
 .feedback input {
     display: block;
+}*/
+.item-container {
+position: relative;
 }
-
+.item-price {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
