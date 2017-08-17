@@ -1,122 +1,241 @@
 html, 
 body {
     font-family: Tahoma, serif;
-    height: 100%;
+    min-height: 100%;
+    width: 100%;
 }
-/*.hidden {
-    display: none;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+ul,
+p,
+li {
+    margin: 0;
+    padding: 0;
 }
 li {
     list-style-type: none;
 }
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: flex-start;
-    height: 100%;
-    width: 100%;
+    background-color: rgb(132, 157, 143);    
+    min-height: 100%;
 }
-.layout-block,
-.zero {
+.layout-block {
     max-width: 1200px;
     min-width: 900px;
+    margin: 0 auto;
 }
-header {
-    border: 2px solid violet;    
+.additional-wrap,
+.social-networks,
+.main-nav-list,
+.action-menu-list,
+.bonus,
+.popular-items,
+.catalog-items,
+.features-list,
+.news-block  {
     display: flex;
-    justify-content: flex-start;
 }
-header div {
-    border: 2px solid grey;
+.social-networks,
+.main-nav-list {
+    justify-content: flex-start;
+    align-items: center;
+}
+.additional-wrap,
+.bonus,
+.popular-items,
+.catalog-items,
+.features-list,
+.news-block {
+    justify-content: space-between;
+}
+.action-menu-list {
+    justify-content: space-between;/* или flex-end...*/
 }
 .action-menu {
     margin-left: auto;
+}
+.action-menu-item {
+    margin: 0 5px 0 5px; /* переделать отступы */
+}
+.main-nav-item {
+    padding: 0 15px 0 15px; /* переделать отступы */
+}
+.main-nav-item,
+.action-menu,
+.action-menu-item {
     position: relative;
 }
-.main-nav-list, 
-.action-menu-list {
-    justify-content: space-between;
+.inner-menu,
+.appearance {
+    display: none;
+    position: absolute;
 }
-.action-menu .info {
+.main-nav-item:hover > .inner-menu,
+.action-menu-item:hover > .appearance {
+    display: block;
+    background-color: rgb(248, 247, 244);
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 1;
+}
+.main-nav-item:hover > .inner-menu,
+.action-menu-item:hover > .appearance {
+    top: 105%; /* переделать - как задать 5px от нижней границы*/
+}
+.main-nav-item:hover > .inner-menu {
+    left: 0;
+}
+.action-menu-item:hover > .appearance {
+    right: 0;
+}
+.info {
     position: absolute;
     top: 100%;
     right: 0;
 }
-main {
-    border: 2px solid red; 
-}
-.slider-block {
-    height: 100px;
-    border: 2px solid green;
-}
-header,
-footer,
-.zero,
-.popular-items-list,
-.features-list,
-.news-block,
-.bonus-list,
-.main-nav-list, 
-.action-menu-list {
-    display: flex;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-.features,
-.bonus-item,
-.popular-item,
-.news,
-.subscription,
-.features-list li {
-    border: 2px solid grey;
-    margin: 0;
-    box-sizing: border-box;
-}
-.features,
-.bonus-item,
-.popular-item,
-.news,
-.subscription {
-    width: 100%;
-}
-.features-list li {
-    width: 50%;
-}
+.catalog-items,
 .features-list {
     flex-wrap: wrap;
 }
-section.contacts {
-    width: 100%;
+.bonus section, 
+.features-list li,
+.news,
+.subscription {
+    width: 46.6%;
 }
-.zero{
-    height: 0px;
-    position: relative; 
-}
+.additional-wrap,
+.slider,
 .address {
-    position: absolute;
-    top: 50px;
-    right: 5%;
-    border: 2px solid grey;
-    z-index: 1;
+    padding: 0 2.3% 0 2.3%;    
 }
-footer {
-    justify-content: space-between;
+.catalog-item {
+    width: 22.2%;
+    margin: 0 1.1% 0 1.1%;
 }
-footer.layout-block {
-    border: 2px solid blue;
-    margin-top: auto;
+.catalog-item img {
+    max-width: 100%;
+    height: auto;
 }
-
-.feedback input {
-    display: block;
-}*/
+.catalog-item:nth-of-type(4n-3),
+.general-info {
+    margin-left: 2.3%;
+}
+.catalog-item:nth-of-type(4n) {
+    margin-right: 2.3%;
+}
 .item-container {
-position: relative;
+    position: relative;
 }
 .item-price {
     position: absolute;
     bottom: 0;
     left: 0;
 }
+.bonus-confiture {
+    background: url("../img/raspberry.jpg") no-repeat bottom center;
+    margin: 0 1.1% 0 2.3%;
+}
+.bonus-chocolate {
+    background: url("../img/chocolate.jpg") no-repeat bottom center;
+    margin: 0 2.3% 0 1.1%;
+}
+.news {
+    background: url("../img/strawberry.jpg") no-repeat center center;
+    margin: 0 1.1% 0 2.3%;
+}
+.subscription {
+    background: url("../img/bg-post.svg") no-repeat top left;
+    margin: 0 2.3% 0 1.1%;
+}
+.social-networks a {
+    display: inline-block;
+    margin: auto 11px auto 0;
+    font-size: 32px;
+    height: 32px;
+    color: rgb(255, 255, 255);
+    opacity: 0.8;
+    border: 2px solid rgb(194, 206, 199);
+    border-radius: 50%;
+}
+.social-networks a:hover {
+    opacity: 1;
+    border: 2px solid rgb(218, 226, 222);
+}
+.social-networks a:active {
+    color: rgb(233, 233, 233);
+    border: 2px solid rgb(218, 226, 222);
+}
+.features-list li{
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+.features-list li:nth-of-type(2n-1) { /*перепишу, т.к. 1 блок */
+    margin: 0 1.1% 0 2.3%;
+}
+.features-list li:nth-of-type(2n) { /* перепишу, т.к. 1 блок */
+    margin: 0 2.3% 0 1.1%;
+}
+.ice-cream {
+    background-image: url("../img/ice-cream.svg");
+}
+.eco-friendly {
+    background-image: url("../img/eco.svg");
+}
+.good-cow {
+    background-image: url("../img/cow.svg");
+}
+.thermopack{
+    background-image: url("../img/thermometer.svg");
+}
+
+
+
+/* иконки через шрифт - не знаю можно ли так */
+@font-face {
+    font-family: 'Gllacy icons';
+    src: url('../fonts/Gllacy-icons.eot');
+    src: url('../fonts/Gllacy-icons.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Gllacy-icons.woff') format('woff'),
+         url('../fonts/Gllacy-icons.ttf') format('truetype'),
+         url('../fonts/Gllacy-icons.svg#Gllacy-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*='icon-']:before{
+	display: inline-block;
+   font-family: 'Gllacy icons';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+}
+.icon-basket:before{content:'\0041';}
+.icon-basket-red:before{content:'\0042';}
+.icon-bg-post:before{content:'\0043';}
+.icon-checkbox-off:before{content:'\0044';}
+.icon-checkbox-on:before{content:'\0045';}
+.icon-radio-off:before{content:'\0046';}
+.icon-cross-big:before{content:'\0047';}
+.icon-cross-small:before{content:'\0048';}
+.icon-radio-on:before{content:'\0049';}
+.icon-entrance:before{content:'\004a';}
+.icon-fb:before{content:'\004b';}
+.icon-filter-button:before{content:'\004c';}
+.icon-heart:before{content:'\004d';}
+.icon-hit:before{content:'\004e';}
+.icon-ruble:before{content:'\004f';}
+.icon-icon-right-small:before{content:'\0050';}
+.icon-instagram:before{content:'\0051';}
+.icon-loupe:before{content:'\0052';}
+.icon-select-arrow:before{content:'\0053';}
+.icon-twitter:before{content:'\0054';}
+.icon-vk:before{content:'\0055';}
