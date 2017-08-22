@@ -59,8 +59,7 @@ li {
 li {
     list-style-type: none;
 }
-.btn,
-a.btn {
+.btn{
     display: inline-block;
     border: none;
     padding: 10px 18px 10px 18px;
@@ -69,15 +68,19 @@ a.btn {
     color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 700;
-    background-image: linear-gradient( 90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    background-image: linear-gradient(0deg, rgb(231, 74, 53), rgb(242, 104, 67));
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     text-decoration: none;
 }
-.btn:hover,
-a.btn:hover {
-    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
-                      linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+.btn:hover {
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
+                      linear-gradient(0deg, rgb(231, 74, 53), rgb(242, 104, 67));
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
+}
+.btn:active {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), 
+                      linear-gradient(0deg, rgb(231, 74, 53), rgb(242, 104, 67));
+    box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
 }
 .check-slide:nth-of-type(1):checked ~.wrapper {
     background-color: rgb(132, 157, 143);
@@ -264,6 +267,28 @@ header .additional-wrap {
     opacity: 1;
     z-index: 1;
 }
+.slider-control {
+    position: absolute;
+    z-index: 2;
+    bottom: 82px;
+    left: 2.3%;
+}
+.slider label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin: 0 6px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.slider label:hover {
+    background-color: rgb(178, 193, 183);
+}
+.check-slide:nth-of-type(1):checked ~.wrapper .label1,
+.check-slide:nth-of-type(2):checked ~.wrapper .label2,
+.check-slide:nth-of-type(3):checked ~.wrapper .label3 {
+    background-color: rgb(255, 255, 255);
+}
 .catalog-items,
 .features-list,
 .supplier-info {
@@ -347,7 +372,8 @@ header .additional-wrap {
     line-height: 22px;
     font-weight: 700;
 }
-.bonus .btn {
+.bonus .btn,
+.subscription .btn {
     float: right;
 }
 
