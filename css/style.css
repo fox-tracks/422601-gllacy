@@ -19,26 +19,37 @@
         url("../fonts/robotomedium.woff") format("woff"),
         url("../fonts/robotomedium.woff2") format("woff2");
 }
+/* домашка по 3 уроку - стили для body и 2х заголовков */
 html, 
 body {
     min-height: 100%;
     min-width: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Tahoma", sans-serif;
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
     color: rgb(255, 255, 255);
+    background-color: rgb(132, 157, 143);
 }
 a {
     color: rgb(255, 255, 255);
 }
-h3 {
+.subsection-title {
+    margin: 0 0 20px 0;
+    padding: 0;
     font-size: 35px;
     line-height: 41px;
+    font-weight: 700;
+}
+.clause-title {
     margin: 0;
-    padding: 0 0 20px 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
 }
 .visually-hidden {
     position: absolute;
@@ -72,15 +83,20 @@ li {
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     text-decoration: none;
 }
-.btn:hover {
+.btn:hover,
+.btn:focus {
     background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
-                      linear-gradient(0deg, rgb(231, 74, 53), rgb(242, 104, 67));
+                      linear-gradient(0deg, rgb(231, 74, 53), rgb(242, 103, 65));
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
 }
 .btn:active {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), 
                       linear-gradient(0deg, rgb(231, 74, 53), rgb(242, 104, 67));
     box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
+}
+/* слайдер */
+.check-slide {
+    display: none;
 }
 .check-slide:nth-of-type(1):checked ~.wrapper {
     background-color: rgb(132, 157, 143);
@@ -101,6 +117,80 @@ li {
     min-height: 100%;
     min-width: 900px;
 }
+.slider p {
+    font-size: 60px;
+    line-height: 60.35px;
+    font-weight: 700;
+    margin: 316px 0 26px 0;
+}
+.slider a.btn {
+    font-size: 32px;
+    line-height: 44px;
+    border-radius: 32px;
+    padding: 10px 41px 10px 41px;
+}
+.slider {
+    height: 584px;
+    margin-bottom: -20px;
+    position: relative;
+}
+.slide {
+    background-repeat: no-repeat;
+    background-position: center top; 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1.4s;
+}
+.slide-green {
+    background-image: url("../img/ice-cream1.png"); 
+}
+.slide-blue {
+    background-image: url("../img/ice-cream2.png"); 
+}
+.slide-purple {
+    background-image: url("../img/ice-cream3.png"); 
+}
+.check-slide:nth-of-type(1):checked ~.wrapper .slide-green{
+    opacity: 1;
+    z-index: 1;
+}
+.check-slide:nth-of-type(2):checked ~.wrapper .slide-blue{
+    opacity: 1;
+    z-index: 1;
+}
+.check-slide:nth-of-type(3):checked ~.wrapper .slide-purple{
+    opacity: 1;
+    z-index: 1;
+}
+.slider-control {
+    position: absolute;
+    z-index: 1;
+    bottom: 82px;
+    left: 2.3%;
+}
+.slider label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin: 0 6px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider label:hover,
+.slider label:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.check-slide:nth-of-type(1):checked ~.wrapper .label-green,
+.check-slide:nth-of-type(2):checked ~.wrapper .label-blue,
+.check-slide:nth-of-type(3):checked ~.wrapper .label-purple {
+    background-color: rgb(255, 255, 255);
+}
+/* сетка + шапка - каша, перепишу все по секциям */
 .layout-block {
     max-width: 1200px;
     min-width: 900px;
@@ -218,77 +308,6 @@ header .additional-wrap {
     top: 100%;
     right: 0;
 }
-.slider p {
-    font-size: 60px;
-    line-height: 60.35px;
-    font-weight: 700;
-    margin: 316px 0 26px 0;
-}
-.slider a.btn {
-    font-size: 32px;
-    line-height: 44px;
-    border-radius: 32px;
-    padding: 10px 41px 10px 41px;
-}
-.slider {
-    height: 584px;
-    margin-bottom: -20px;
-    position: relative;
-}
-.slide {
-    background-repeat: no-repeat;
-    background-position: center top; 
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 1.4s;
-}
-.slide-1 {
-    background-image: url("../img/ice-cream1.png"); 
-}
-.slide-2 {
-    background-image: url("../img/ice-cream2.png"); 
-}
-.slide-3 {
-    background-image: url("../img/ice-cream3.png"); 
-}
-.check-slide:nth-of-type(1):checked ~.wrapper .slide-1{
-    opacity: 1;
-    z-index: 1;
-}
-.check-slide:nth-of-type(2):checked ~.wrapper .slide-2{
-    opacity: 1;
-    z-index: 1;
-}
-.check-slide:nth-of-type(3):checked ~.wrapper .slide-3{
-    opacity: 1;
-    z-index: 1;
-}
-.slider-control {
-    position: absolute;
-    z-index: 2;
-    bottom: 82px;
-    left: 2.3%;
-}
-.slider label {
-    display: inline-block;
-    width: 17px;
-    height: 17px;
-    margin: 0 6px;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 50%;
-}
-.slider label:hover {
-    background-color: rgb(178, 193, 183);
-}
-.check-slide:nth-of-type(1):checked ~.wrapper .label1,
-.check-slide:nth-of-type(2):checked ~.wrapper .label2,
-.check-slide:nth-of-type(3):checked ~.wrapper .label3 {
-    background-color: rgb(255, 255, 255);
-}
 .catalog-items,
 .features-list,
 .supplier-info {
@@ -304,6 +323,31 @@ header .additional-wrap {
 .address {
     padding: 0 2.3% 0 2.3%;    
 }
+/* бонусы */
+.bonus-confiture {
+    background: url("../img/raspberry.jpg") no-repeat bottom center;
+    margin: 0 1.1% 0 2.3%;
+
+}
+.bonus-chocolate {
+    background: url("../img/chocolate.jpg") no-repeat bottom center;
+    margin: 0 2.3% 0 1.1%;
+    z-index: 2;
+}
+.bonus section {
+    padding: 23px 22px 23px 21px;
+}
+.bonus p {
+    height: 88px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+}
+.bonus .btn,
+.subscription .btn {
+    float: right;
+}
+/* популярные товары и каталог */
 .catalog-item {
     width: 22.2%;
     margin: 0 1.1% 0 1.1%;
@@ -334,7 +378,7 @@ header .additional-wrap {
     font-size: 45px;
     font-weight: 700;
 }
-.catalog-item::before {
+popular-item .catalog-item::before {
     display: block;
     content: "";
     position: absolute;
@@ -352,73 +396,6 @@ header .additional-wrap {
     line-height: 22px;
     font-weight: 500;
     padding: 12px 0;
-}
-.bonus-confiture {
-    background: url("../img/raspberry.jpg") no-repeat bottom center;
-    margin: 0 1.1% 0 2.3%;
-
-}
-.bonus-chocolate {
-    background: url("../img/chocolate.jpg") no-repeat bottom center;
-    margin: 0 2.3% 0 1.1%;
-    z-index: 2;
-}
-.bonus section {
-    padding: 23px 22px 23px 21px;
-}
-.bonus p {
-    height: 88px;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 700;
-}
-.bonus .btn,
-.subscription .btn {
-    float: right;
-}
-
-.news {
-    background: url("../img/strawberry.jpg") no-repeat center center;
-    margin: 0 1.1% 0 2.3%;
-}
-.subscription {
-    margin: 0 2.3% 0 1.1%;
-    background-image: url("../img/post-bg.png");
-    background-color: rgb(248, 247, 244);
-    background-repeat: repeat;
-    padding: 5px;
-    background-origin: border-box;
-}
-.subscription-wrapper {
-    min-width: 100%;
-    min-height: 100%;
-    background-color: rgb(248, 247, 244);
-    border-radius: 12px;
-}
-.social-networks {
-    margin-right: auto;
-}
-.social-networks li {
-    margin-right: 11px;
-}
-
-.social-link svg {
-    fill: rgb(255, 255, 255);
-    fill-opacity: 0.8;
-    border: 2px solid rgb(194, 206, 199);
-    border-radius: 50%;
-}
-.social-link:hover svg{
-    outline: none;
-    fill-opacity: 1;
-    border: 2px solid rgb(218, 226, 222);
-}
-a.social-link:active svg{
-    fill: rgb(233, 233, 233);
-    border: 2px solid rgb(218, 226, 222);
-}
-.supplier-info li {
-    max-width: 50%;
 }
 /* блок достоинства    */
 .features {
@@ -449,6 +426,52 @@ a.social-link:active svg{
 .thermopack{
     background-image: url("../img/thermometer.svg");
 }
+/* блок новости и подписка */
+.news {
+    background: url("../img/strawberry.jpg") no-repeat center center;
+    margin: 0 1.1% 0 2.3%;
+}
+.subscription {
+    margin: 0 2.3% 0 1.1%;
+    background-image: url("../img/post-bg.png");
+    background-color: rgb(248, 247, 244);
+    background-repeat: repeat;
+    padding: 5px;
+    background-origin: border-box;
+}
+.subscription-wrapper {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgb(248, 247, 244);
+    border-radius: 12px;
+}
+/* подвал */
+.social-networks {
+    margin-right: auto;
+}
+.social-networks li {
+    margin-right: 11px;
+}
+
+.social-link svg {
+    fill: rgb(255, 255, 255);
+    fill-opacity: 0.8;
+    border: 2px solid rgba(255, 255, 255, 0.47);
+    border-radius: 50%;
+}
+.social-link:hover svg
+.social-link:focus svg{
+    fill-opacity: 1;
+    border: 2px solid rgb(218, 226, 222);
+}
+a.social-link:active svg{
+    fill: rgb(233, 233, 233);
+    border: 2px solid rgb(218, 226, 222);
+}
+.supplier-info li {
+    max-width: 50%;
+}
+
 
 
 
