@@ -23,12 +23,16 @@ html,
 body {
     min-height: 100%;
     min-width: 100%;
+    margin: 0;
+    padding: 0;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
-    margin: 0;
-    padding: 0;
+    color: rgb(255, 255, 255);
+}
+a {
+    color: rgb(255, 255, 255);
 }
 h3 {
     font-size: 35px;
@@ -41,8 +45,8 @@ h3 {
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: 0;
     padding: 0;
+    border: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
@@ -65,40 +69,34 @@ a.btn {
     color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 700;
-    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: linear-gradient( 90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     text-decoration: none;
 }
 .btn:hover,
 a.btn:hover {
-    box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
+                      linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
 }
 .check-slide:nth-of-type(1):checked ~.wrapper {
     background-color: rgb(132, 157, 143);
     background-image: url("../img/Backlight1.png");  
-    background-repeat: no-repeat;
-    background-position: center top;
-    min-height: 100%;
-    min-width: 900px;
 }
 .check-slide:nth-of-type(2):checked ~.wrapper {
     background-color: rgb(137, 150, 166);
     background-image: url("../img/Backlight2.png");  
-    background-repeat: no-repeat;
-    background-position: center top;
-    min-height: 100%;
-    min-width: 900px;
 }
 .check-slide:nth-of-type(3):checked ~.wrapper {
     background-color: rgb(157, 139, 132);
     background-image: url("../img/Backlight3.png"); 
+}
+.wrapper {
+    transition: background-color 1.4s;
     background-repeat: no-repeat; 
     background-position: center top;
     min-height: 100%;
     min-width: 900px;
-}
-.wrapper {
-    transition: background-color 1.4s;
 }
 .layout-block {
     max-width: 1200px;
@@ -150,17 +148,6 @@ header .additional-wrap {
 }
 .action-menu-item {
     margin: 0 5px 0 5px; /* переделать отступы */
-}
-header,
-header a,
-.slider,
-.bonus,
-.bonus a,
-.popular-items,
-.popular-items a,
-footer,
-footer a {
-    color: rgb(255, 255, 255);
 }
 .main-nav-list,
 .action-menu,
@@ -237,7 +224,6 @@ footer a {
 .slider a.btn {
     font-size: 32px;
     line-height: 44px;
-    font-weight: 700;
     border-radius: 32px;
     padding: 10px 41px 10px 41px;
 }
@@ -268,12 +254,15 @@ footer a {
 }
 .check-slide:nth-of-type(1):checked ~.wrapper .slide-1{
     opacity: 1;
+    z-index: 1;
 }
 .check-slide:nth-of-type(2):checked ~.wrapper .slide-2{
     opacity: 1;
+    z-index: 1;
 }
 .check-slide:nth-of-type(3):checked ~.wrapper .slide-3{
     opacity: 1;
+    z-index: 1;
 }
 .catalog-items,
 .features-list,
@@ -347,7 +336,7 @@ footer a {
 .bonus-chocolate {
     background: url("../img/chocolate.jpg") no-repeat bottom center;
     margin: 0 2.3% 0 1.1%;
-    z-index: 1;
+    z-index: 2;
 }
 .bonus section {
     padding: 23px 22px 23px 21px;
