@@ -29,6 +29,12 @@ body {
     line-height: 22px;
     color: rgb(255, 255, 255);
     background-color: rgb(132, 157, 143);
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
 }
 a {
     color: rgb(255, 255, 255);
@@ -61,12 +67,7 @@ p,
 li {
     margin: 0;
     padding: 0;
-}
-li {
     list-style-type: none;
-}
-* {
-    box-sizing: border-box; 
 }
 .btn{
     display: inline-block;
@@ -136,7 +137,7 @@ li {
     background-repeat: no-repeat;
     background-position: center top; 
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     position: absolute;
     z-index: 0;
     text-align: center;
@@ -197,7 +198,7 @@ li {
 .catalog-items,
 .features-list,
 .news-block,
-.supplier-info-links {
+.additional-links-list {
     display: flex;
 }
 .social-networks-list {
@@ -275,7 +276,9 @@ header .additional-wrap {
     margin-top: 5px;
     top: 100%;
     left: 0;
-
+}
+.search a {
+    font-size: 0;
 }
 .inner-menu a{
     color: black;
@@ -299,8 +302,7 @@ header .additional-wrap {
     right: 0;
 }
 .catalog-items,
-.features-list,
-.supplier-info-links {
+.features-list {
     flex-wrap: wrap;
 }
 .bonus section, 
@@ -328,7 +330,7 @@ header .additional-wrap {
     padding: 23px 22px 23px 21px;
 }
 .bonus p {
-    height: 88px;
+    min-height: 88px;
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
@@ -436,13 +438,12 @@ header .additional-wrap {
     border-radius: 12px;
 }
 /* подвал */
-.social-networks-list {
-    margin-right: auto;
-}
 .social-networks-list li {
     margin-right: 11px;
 }
-
+.social-networks-list a {
+    font-size: 0;
+}
 .social-link svg {
     fill: rgb(255, 255, 255);
     fill-opacity: 0.8;
@@ -458,7 +459,7 @@ a.social-link:active svg{
     fill: rgb(233, 233, 233);
     border: 2px solid rgb(218, 226, 222);
 }
-.supplier-info-links li {
+.additional-links-list li {
     max-width: 50%;
 }
 

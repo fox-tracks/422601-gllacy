@@ -55,15 +55,16 @@
         <input type="radio" name="wrap" id="wrap-purple" class="check-slide">
         <div class="wrapper">
             <header class="layout-block">
+                <h1 class="visually-hidden">Магазин мороженого Gllacy Shop</h1>
                 <div class="additional-wrap">
                     <a class="header-logo">
-                        <img src="img/logo.svg" alt="GllacyShop" width="154" height="64">
+                        <img src="img/logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
                     </a>
                     <nav class="main-nav">
                         <h3 class="visually-hidden">Главное меню</h3>
                         <ul class="main-nav-list">
                             <li class="main-nav-item">
-                                <a href="href="catalog.html"" class="main-nav-link">Каталог</a>
+                                <a href="catalog.html" class="main-nav-link">Каталог</a>
                                 <ul class="inner-menu">
                                     <li><a href="#">Новинки</a></li>
                                     <li><a href="#">Сливочное</a></li>
@@ -135,11 +136,11 @@
                         </div>
                         <div class="slide slide-blue">
                             <p>Шоколадный пломбир<br>и лимонный сорбет</p>    
-                            <a href="#" class="btn">Давайте оба!</a>
+                            <a href="#" class="btn" tabindex="-1">Давайте оба!</a>
                         </div>
                         <div class="slide slide-purple">
                             <p>Пломбир с помадкой<br>и клубничный щербет</p>    
-                            <a href="#" class="btn">Давайте оба!</a>
+                            <a href="#" class="btn" tabindex="-1">Давайте оба!</a>
                         </div>
                         <div class="slider-control">
                             <label for="wrap-green" class="label-green" tabindex="0"></label>
@@ -164,7 +165,7 @@
                         <h2 class="visually-hidden">Популярные товары</h2>
                         <article class="catalog-item">
                             <a href="#" class="item-container">
-                                <img src="img/item1.jpg" alt="Хит-1" width="267" height="267">
+                                <img src="img/item1.jpg" alt="Хит Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
                                 <div class="item-price">
                                     <span>310</span>&#8381;/кг
                                 </div>    
@@ -174,7 +175,7 @@
                         </article>
                         <article class="catalog-item">
                             <a href="#" class="item-container">
-                                <img src="img/item2.jpg" alt="Хит-2" width="267" height="267">
+                                <img src="img/item2.jpg" alt="Хит Сливочно-кофейное с кусочками шоколада" width="267" height="267">
                                 <div class="item-price">
                                     <span>380</span>&#8381;/кг
                                 </div>
@@ -184,7 +185,7 @@
                         </article>
                         <article class="catalog-item">
                             <a href="#" class="item-container">
-                                <img src="img/item3.jpg" alt="Хит-3" width="267" height="267">
+                                <img src="img/item3.jpg" alt="Хит Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
                                 <div class="item-price">
                                     <span>355</span>&#8381;/кг
                                 </div>
@@ -194,7 +195,7 @@
                         </article>
                         <article class="catalog-item">
                             <a href="#" class="item-container">
-                                <img src="img/item4.jpg" alt="Хит-4" width="267" height="267">
+                                <img src="img/item4.jpg" alt="Хит Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
                                 <div class="item-price">
                                     <span>415</span>&#8381;/кг
                                 </div>
@@ -257,7 +258,11 @@
                             <section class="feedback-form appearance">
                                 <h2 class="visually-hidden">Форма обратной связи</h2>
                                 <p>Мы обязательно Вам ответим!</p>
-                                <button>Закрыть</button>
+                                <button aria-label="Закрыть">
+                                    <svg width="18px" height="17px">
+                                        <use xlink:href="#cross-big"/>
+                                    </svg>
+                                </button>
                                 <form action="#" method="post" class="feedback">
                                     <label>
                                         <input type="text" name="feedback-name" id="feedback-name">
@@ -285,28 +290,28 @@
                         <h3 class="visually-hidden">Мы в соцсетях</h3>
                         <ul class="social-networks-list">
                             <li class="twitter">
-                                <a href="https://twitter.com" class="social-link">
+                                <a href="https://twitter.com" class="social-link">Твиттер
                                     <svg width="32px" height="32px">
                                         <use xlink:href="#twitter"/>
                                     </svg>
                                 </a>
                             </li>
                             <li class="instagram">
-                                <a href="https://www.instagram.com" class="social-link">
+                                <a href="https://www.instagram.com" class="social-link">Инстаграм
                                     <svg width="32" height="32">
                                         <use xlink:href="#instagram"/>
                                     </svg>
                                 </a>
                             </li>
                             <li class="facebook">
-                                <a href="https://www.facebook.com/" class="social-link">
+                                <a href="https://www.facebook.com/" class="social-link">Фейсбук
                                     <svg width="32" height="32">
                                         <use xlink:href="#fb"/>
                                     </svg>
                                 </a>
                             </li>
                             <li class="vk">
-                                <a href="https://vk.com/" class="social-link">
+                                <a href="https://vk.com/" class="social-link">Вконтакте
                                     <svg width="32" height="32">
                                         <use xlink:href="#vk"/>
                                     </svg>
@@ -314,12 +319,15 @@
                             </li>
                         </ul>
                     </section>
-                    <ul class="supplier-info-links">
-                        <li><a href="#">Для поставщиков</a></li>
-                        <li><a href="#">Наши документы</a></li>
-                        <li><a href="#">О производстве</a></li>
-                        <li><a href="#">Экологические стандарты</a></li>
-                    </ul>
+                    <section class="additional-links">
+                        <h3 class="visually-hidden">Дополнительные ссылки</h3>
+                        <ul class="additional-links-list">
+                            <li><a href="#">Для поставщиков</a></li>
+                            <li><a href="#">Наши документы</a></li>
+                            <li><a href="#">О производстве</a></li>
+                            <li><a href="#">Экологические стандарты</a></li>
+                        </ul>
+                    </section>
                     <div class="academy">
                         <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" alt="Логотип Академии" width="108" height="39"></a>
                         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a><span>&#169;</span><span>2017</span></p>
