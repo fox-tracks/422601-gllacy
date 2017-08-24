@@ -23,13 +23,10 @@
 html, 
 body {
     min-height: 100%;
-    min-width: 100%;
     margin: 0;
-    padding: 0;
     font-family: "Roboto", "Tahoma", sans-serif;
     font-size: 16px;
     line-height: 22px;
-    font-weight: 400;
     color: rgb(255, 255, 255);
     background-color: rgb(132, 157, 143);
 }
@@ -38,14 +35,12 @@ a {
 }
 .subsection-title {
     margin: 0 0 20px 0;
-    padding: 0;
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
 }
 .clause-title {
     margin: 0;
-    padding: 0;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
@@ -72,7 +67,7 @@ li {
 }
 .btn{
     display: inline-block;
-    border: none;
+    border: 0;
     padding: 10px 18px 10px 18px;
     border-radius: 22px;
     line-height: 24px;
@@ -100,15 +95,15 @@ li {
 }
 .check-slide:nth-of-type(1):checked ~.wrapper {
     background-color: rgb(132, 157, 143);
-    background-image: url("../img/Backlight1.png");  
+    background-image: url("../img/backlight1.png");  
 }
 .check-slide:nth-of-type(2):checked ~.wrapper {
     background-color: rgb(137, 150, 166);
-    background-image: url("../img/Backlight2.png");  
+    background-image: url("../img/backlight2.png");  
 }
 .check-slide:nth-of-type(3):checked ~.wrapper {
     background-color: rgb(157, 139, 132);
-    background-image: url("../img/Backlight3.png"); 
+    background-image: url("../img/backlight3.png"); 
 }
 .wrapper {
     transition: background-color 1.4s;
@@ -154,15 +149,9 @@ li {
 .slide-purple {
     background-image: url("../img/ice-cream3.png"); 
 }
-.check-slide:nth-of-type(1):checked ~.wrapper .slide-green{
-    opacity: 1;
-    z-index: 1;
-}
-.check-slide:nth-of-type(2):checked ~.wrapper .slide-blue{
-    opacity: 1;
-    z-index: 1;
-}
-.check-slide:nth-of-type(3):checked ~.wrapper .slide-purple{
+.check-slide:nth-of-type(1):checked ~.wrapper .slide-green,
+.check-slide:nth-of-type(2):checked ~.wrapper .slide-blue,
+.check-slide:nth-of-type(3):checked ~.wrapper .slide-purple {
     opacity: 1;
     z-index: 1;
 }
@@ -240,7 +229,7 @@ header .additional-wrap {
     margin-left: auto;
 }
 .action-menu-item {
-    margin: 0 5px 0 5px; /* переделать отступы */
+    margin: 0 5px; /* переделать отступы */
 }
 .main-nav-list,
 .action-menu,
@@ -378,7 +367,7 @@ header .additional-wrap {
     font-size: 45px;
     font-weight: 700;
 }
-popular-item .catalog-item::before {
+.popular-items .catalog-item::before {
     display: block;
     content: "";
     position: absolute;
