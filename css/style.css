@@ -65,6 +65,9 @@ li {
 li {
     list-style-type: none;
 }
+* {
+    box-sizing: border-box; 
+}
 .btn{
     display: inline-block;
     border: 0;
@@ -186,7 +189,7 @@ li {
     margin: 0 auto;
 }
 .additional-wrap,
-.social-networks,
+.social-networks-list,
 .main-nav-list,
 .action-menu-list,
 .bonus,
@@ -194,10 +197,10 @@ li {
 .catalog-items,
 .features-list,
 .news-block,
-.supplier-info {
+.supplier-info-links {
     display: flex;
 }
-.social-networks {
+.social-networks-list {
     justify-content: flex-start;
     align-items: center;
 }
@@ -248,7 +251,6 @@ header .additional-wrap {
     margin-right: 1px;
     height: 32px;
     border-radius: 14px;
-    box-sizing: border-box;  
     background-color: rgb(247, 246, 243);
 }
 .main-nav-item > a {
@@ -270,7 +272,6 @@ header .additional-wrap {
     border-radius: 5px;
     padding: 20px;
     z-index: 1;
-    box-sizing: border-box;
     margin-top: 5px;
     top: 100%;
     left: 0;
@@ -299,7 +300,7 @@ header .additional-wrap {
 }
 .catalog-items,
 .features-list,
-.supplier-info {
+.supplier-info-links {
     flex-wrap: wrap;
 }
 .bonus section, 
@@ -435,10 +436,10 @@ header .additional-wrap {
     border-radius: 12px;
 }
 /* подвал */
-.social-networks {
+.social-networks-list {
     margin-right: auto;
 }
-.social-networks li {
+.social-networks-list li {
     margin-right: 11px;
 }
 
@@ -457,7 +458,7 @@ a.social-link:active svg{
     fill: rgb(233, 233, 233);
     border: 2px solid rgb(218, 226, 222);
 }
-.supplier-info li {
+.supplier-info-links li {
     max-width: 50%;
 }
 
