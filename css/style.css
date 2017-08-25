@@ -328,7 +328,6 @@ header .additional-wrap {
 .bonus-confiture {
     background: url("../img/raspberry.jpg") no-repeat bottom center;
     margin: 0 1.1% 0 2.3%;
-
 }
 .bonus-chocolate {
     background: url("../img/chocolate.jpg") no-repeat bottom center;
@@ -419,7 +418,9 @@ header .additional-wrap {
     margin-right: 1.2%;    
 }
 .catalog-item:hover .btn {
-    display: block;
+    display: inline-block;
+    padding: 10px 0;
+    min-width: 200px;
 }
 .catalog-item:hover p {
     padding-bottom: 12px;
@@ -442,9 +443,9 @@ header .additional-wrap {
     justify-content: space-between;
 }
 .features li {
-    max-width: 48.85%;
-    padding-left: 60px; /*уточнить */
-    padding-top: 25px; /*уточнить */
+    max-width: 48.95%;
+    padding-left: 55px; /*уточнить */
+    padding-top: 15px; /*уточнить */
 }
 .features-list li{
     background-repeat: no-repeat;
@@ -463,9 +464,16 @@ header .additional-wrap {
     background-image: url("../img/thermometer.svg");
 }
 /* блок новости и подписка */
+.news,
+.subscription,
+.news a {
+    min-height: 134px;
+    color: black;
+}
 .news {
     background: url("../img/strawberry.jpg") no-repeat center center;
     margin: 0 1.1% 0 2.3%;
+    padding: 23px;/* уточнить */
 }
 .subscription {
     margin: 0 2.3% 0 1.1%;
@@ -480,6 +488,7 @@ header .additional-wrap {
     min-height: 100%;
     background-color: rgb(248, 247, 244);
     border-radius: 12px;
+    padding: 23px;/* уточнить */
 }
 /* подвал */
 .social-networks-list li {
