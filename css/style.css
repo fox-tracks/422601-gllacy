@@ -189,11 +189,9 @@ li {
     min-width: 900px;
     margin: 0 auto;
 }
-.additional-wrap,
 .social-networks-list,
 .main-nav-list,
 .action-menu-list,
-.bonus,
 .popular-items,
 .catalog-items,
 .features-list,
@@ -205,7 +203,6 @@ li {
     justify-content: flex-start;
     align-items: center;
 }
-.bonus,
 .popular-items,
 .catalog-items,
 .features-list,
@@ -213,24 +210,28 @@ li {
 footer .additional-wrap {
     justify-content: space-between;
 }
-.bonus,
 .popular-items,
 .features,
 .news {
     margin-bottom: 40px;
 }
+/* шапка */
 header .additional-wrap {
     padding-top: 9px;
     padding-bottom: 11px;
 }
+.additional-wrap {
+    display: flex;
+    justify-content: flex-start;
+}
 .additional-wrap nav {
     margin-top: 14px;
 }
-.action-menu-list {
-    justify-content: space-between;/* или flex-end...*/
-}
 .action-menu {
     margin-left: auto;
+}
+.action-menu-list {
+    justify-content: space-between;/* или flex-end...*/
 }
 .action-menu-item {
     margin: 0 5px; /* переделать отступы */
@@ -305,7 +306,6 @@ header .additional-wrap {
 .features-list {
     flex-wrap: wrap;
 }
-.bonus section, 
 .news,
 .subscription {
     width: 46.6%;
@@ -316,6 +316,15 @@ header .additional-wrap {
     padding: 0 2.3% 0 2.3%;    
 }
 /* бонусы */
+.bonus {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.bonus section {
+    width: 46.6%;
+    border-radius: 12px;
+}
 .bonus-confiture {
     background: url("../img/raspberry.jpg") no-repeat bottom center;
     margin: 0 1.1% 0 2.3%;
@@ -328,6 +337,7 @@ header .additional-wrap {
 }
 .bonus section {
     padding: 23px 22px 23px 21px;
+    min-height: 134px;
 }
 .bonus p {
     min-height: 88px;
@@ -359,6 +369,7 @@ header .additional-wrap {
 .item-container,
 .catalog-item {
     position: relative;
+    display: block;
 }
 .item-container img {
     border-radius: 50%;
@@ -370,7 +381,7 @@ header .additional-wrap {
     font-size: 45px;
     font-weight: 700;
 }
-.popular-items .catalog-item::before {
+.popular-items .item-container::before {
     display: block;
     content: "";
     position: absolute;
@@ -387,7 +398,32 @@ header .additional-wrap {
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
-    padding: 12px 0;
+    padding-top: 12px;
+}
+.catalog-item .btn {
+    display: none; 
+}
+.catalog-item:hover,
+.catalog-item:nth-of-type(4n-3):hover,
+.catalog-item:nth-of-type(4n):hover {
+    padding: 10px 1.1% 15px 1.1%;
+    width: 24.4%;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin-top: -10px;
+}
+.catalog-item:nth-of-type(4n-3):hover {
+    margin-left: 1.2%;    
+}
+.catalog-item:nth-of-type(4n):hover {
+    margin-right: 1.2%;    
+}
+.catalog-item:hover .btn {
+    display: block;
+}
+.catalog-item:hover p {
+    padding-bottom: 12px;
 }
 /* блок достоинства    */
 .features {
