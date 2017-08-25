@@ -441,9 +441,6 @@ header .additional-wrap {
 .social-networks-list li {
     margin-right: 11px;
 }
-.social-networks-list a {
-    font-size: 0;
-}
 .social-link svg {
     fill: rgb(255, 255, 255);
     fill-opacity: 0.8;
