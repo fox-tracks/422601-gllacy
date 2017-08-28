@@ -192,10 +192,8 @@ ul {
 }
 .social-networks-list,
 .main-nav-list,
-.action-menu-list,
 .popular-items,
 .catalog-items,
-.features-list,
 .news-block,
 .additional-links-list {
     display: flex;
@@ -228,18 +226,7 @@ header .additional-wrap {
 .additional-wrap nav {
     margin-top: 14px;
 }
-.action-menu {
-    margin-left: auto;
-}
-.action-menu-list {
-    justify-content: space-between;/* или flex-end...*/
-}
-.action-menu-item {
-    margin: 0 5px; /* переделать отступы */
-}
-.main-nav-list,
-.action-menu,
-.action-menu-item {
+.main-nav-list {
     position: relative;
 }
 
@@ -279,9 +266,6 @@ header .additional-wrap {
     top: 100%;
     left: 0;
 }
-.search a {
-    font-size: 0;
-}
 .inner-menu a{
     color: black;
     text-decoration: none;
@@ -298,10 +282,68 @@ header .additional-wrap {
 .action-menu-item:hover > .appearance {
     display: block;
 }
+.action-menu {
+    margin-left: auto;
+    position: relative;
+}
+.action-menu-list {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+.action-menu-item {
+    margin: 0 5px; /* переделать отступы */
+    height: 32px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    display: inline-block;
+    padding-top: 8px;
+    padding-left: 45px;
+}
+.action-menu-item a {
+    text-decoration: none;
+}
+.search {
+    width: 32px;
+    background-image: url("../img/loupe.svg");
+    background-position-x: center;
+    padding-left: 0;
+}
+.search a {
+    font-size: 0;
+}
+.login {
+    width: 92px;
+    background-image: url("../img/entrance.svg");
+    background-position-x: 16px;
+}
+.basket {
+    width: 117px;
+    background-image: url("../img/basket.svg");
+    background-position-x: 16px;
+    margin-right: 0;
+}
 .info {
     position: absolute;
     top: 100%;
     right: 0;
+    font-weight: 700;
+}
+.working-hours {
+    font-size: 14px;
+    line-height: 16px;
+    padding-bottom: 5px;
+}
+.info a {
+    font-size: 22px;
+    line-height: 24px;
+    text-decoration: none;
+}
+.info > *{
+    white-space: nowrap;
+    float: right;  
 }
 .catalog-items,
 .features-list {
@@ -439,6 +481,11 @@ header .additional-wrap {
 .features p {
     width: 100%;
 }
+.general-info {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+}
 .features-list {
     display: flex;
     flex-wrap: wrap;
@@ -477,6 +524,11 @@ header .additional-wrap {
     margin: 0 1.1% 0 2.3%;
     padding: 23px;/* уточнить */
 }
+.news-title a{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+}
 .subscription {
     margin: 0 2.3% 0 1.1%;
     background-image: url("../img/post-bg.png");
@@ -491,6 +543,15 @@ header .additional-wrap {
     background-color: rgb(248, 247, 244);
     border-radius: 12px;
     padding: 23px;/* уточнить */
+}
+/* адресный блок */
+.address {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.address a {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 /* подвал */
 .social-networks-list li {
@@ -511,8 +572,33 @@ a.social-link:active svg {
     fill: rgb(233, 233, 233);
     border: 2px solid rgb(218, 226, 222);
 }
-.additional-links-list li {
-    max-width: 50%;
+.additional-links {
+    font-size: 13px;
+    line-height: 18px;
+}
+.additional-links-list li:first-child {
+    font-weight: 700;
+}
+.additional-links-list{
+    position: relative;
+}
+.additional-links-list:before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 18px;
+    background-image: url("../img/heart.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    right: 100%;
+
+}
+.academy {
+    font-size: 12px;
+    line-height: 18px;
 }
 
 
