@@ -19,7 +19,6 @@
         url("../fonts/robotomedium.woff") format("woff"),
         url("../fonts/robotomedium.woff2") format("woff2");
 }
-/* домашка по 3 уроку - стили для body и 2х заголовков */
 html, 
 body {
     min-height: 100%;
@@ -67,6 +66,8 @@ p,
 li {
     margin: 0;
     padding: 0;
+}
+ul {
     list-style-type: none;
 }
 .btn{
@@ -419,8 +420,9 @@ header .additional-wrap {
 }
 .catalog-item:hover .btn {
     display: inline-block;
-    padding: 10px 0;
-    min-width: 200px;
+    padding: 10px 9%;
+    max-width: 203px;
+    width: 100%;
 }
 .catalog-item:hover p {
     padding-bottom: 12px;
