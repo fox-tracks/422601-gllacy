@@ -82,6 +82,7 @@ ul {
     background-image: linear-gradient(0deg, rgb(231, 74, 53), rgb(242, 104, 67));
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     text-decoration: none;
+    text-align: center;
 }
 .btn:hover,
 .btn:focus {
@@ -194,7 +195,6 @@ ul {
 .main-nav-list,
 .popular-items,
 .catalog-items,
-.news-block,
 .additional-links-list {
     display: flex;
 }
@@ -205,13 +205,10 @@ ul {
 .popular-items,
 .catalog-items,
 .features-list,
-.news-block,
 footer .additional-wrap {
     justify-content: space-between;
 }
-.popular-items,
-.features,
-.news {
+.popular-items {
     margin-bottom: 40px;
 }
 /* шапка */
@@ -379,7 +376,7 @@ header .additional-wrap {
 }
 .bonus section {
     padding: 23px 22px 23px 21px;
-    min-height: 134px;
+    min-height: 229px;
 }
 .bonus p {
     min-height: 88px;
@@ -480,6 +477,7 @@ header .additional-wrap {
     background: rgb(238, 225, 198) url("../img/wafer.jpg") repeat;
     color: rgb(0, 0, 0);
     padding: 23px; /*уточнить */
+    margin-bottom: 40px;
 }
 .features p {
     width: 100%;
@@ -516,17 +514,26 @@ header .additional-wrap {
     background-image: url("../img/thermometer.svg");
 }
 /* блок новости и подписка */
+.news-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
 .news,
-.subscription,
-.news a {
-    min-height: 134px;
+.subscription {
+    min-height: 220px;
     color: black;
 }
+.news a {
+    color: black;
+}
+
 .news {
     background: url("../img/strawberry.jpg") no-repeat center center;
     margin: 0 1.1% 0 2.3%;
     padding: 23px;/* уточнить */
 }
+
 .news-title a{
     font-size: 24px;
     line-height: 30px;
@@ -548,6 +555,19 @@ header .additional-wrap {
     padding: 23px;/* уточнить */
 }
 /* адресный блок */
+.map {
+    position: relative; 
+}
+.map ymaps {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.map .layout-block {
+    padding: 62px 0;
+    z-index: 10;
+    position: relative;
+}
 .address {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -555,6 +575,7 @@ header .additional-wrap {
     min-height: 306px; 
     border-radius: 16px;
     padding: 31px 25px;
+    margin: 0 2.3% 0 auto;
 }
 .address a:first-of-type {
     color: rgb(0, 0, 0);
@@ -574,6 +595,16 @@ header .additional-wrap {
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
+}
+.address p:nth-of-type(2) {
+    padding-bottom: 24px; 
+}
+.address p:last-of-type {
+    padding-bottom: 27px; 
+}
+.map a.btn {
+    display: block;
+    padding: 10px 0;
 }
 /* подвал */
 .social-networks-list li {
