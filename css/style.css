@@ -461,10 +461,13 @@ header .additional-wrap {
     margin-right: 1.2%;    
 }
 .catalog-item:hover .btn {
-    display: inline-block;
-    padding: 10px 9%;
-    max-width: 203px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px auto;
+    max-width: 202px;
+    min-width: 196px;
     width: 100%;
+    white-space: nowrap;
 }
 .catalog-item:hover p {
     padding-bottom: 12px;
@@ -548,10 +551,29 @@ header .additional-wrap {
 .address {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
+    width: 302px;
+    min-height: 306px; 
+    border-radius: 16px;
+    padding: 31px 25px;
 }
-.address a {
-    background-color: rgb(255, 255, 255);
+.address a:first-of-type {
     color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.address p:first-of-type,
+.address p:nth-of-type(3) {
+    font-size: 14px;
+    line-height: 20px;
+}
+.address p:last-of-type {
+    font-size: 14px;
+    line-height: 22px;
+}
+.address p:nth-of-type(2),
+.address a:first-of-type {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
 }
 /* подвал */
 .social-networks-list li {
