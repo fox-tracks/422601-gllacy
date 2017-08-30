@@ -191,14 +191,15 @@ ul {
     min-width: 900px;
     margin: 0 auto;
 }
+.additional-wrap {
+    padding: 0 2.3% 0 2.3%; 
+    display: flex;
+    justify-content: flex-start;   
+}
 /* шапка */
 header .additional-wrap {
     padding-top: 9px;
     padding-bottom: 11px;
-}
-.additional-wrap {
-    display: flex;
-    justify-content: flex-start;
 }
 .additional-wrap nav {
     margin-top: 14px;
@@ -233,35 +234,48 @@ header .additional-wrap {
 .main-nav-item:last-child {
     margin-right: 0;
 }
-.inner-menu,
-.appearance {
+.main-nav-list .appearance {
     display: none;
     position: absolute;
+    z-index: 3;
+    padding-top: 5px;
+    top: 100%;
+    left: 0;
+}
+.inner-menu {
     background-color: rgb(248, 247, 244);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
-    padding: 20px;
-    z-index: 3;
-    margin-top: 5px;
-    top: 100%;
-    left: 0;
+    min-height: 172px;
+    padding: 0 9px 6px 6px;
 }
 .inner-menu a{
     color: black;
     text-decoration: none;
+    font-size: 14px;
 }
-.inner-menu::before{
+.inner-menu li {
     display: block;
-    content: "";
-    background-color: transparent;
-    height: 5px;
-    margin-top: -25px;
-    margin-bottom: 15px;
+    height: 28px;
+    white-space: nowrap;
+    margin-bottom: 4px;
 }
-.main-nav-item:hover > .inner-menu,
-.action-menu-item:hover > .appearance {
+.inner-menu li:first-child {
+    height: 38px;
+    border-bottom: 1px solid rgb(209, 208, 206);
+}
+.inner-menu a {
+   line-height: 28px;
+   margin-left: 14px;
+}
+.inner-menu li:first-child a{
+    line-height: 38px;
+    font-weight: 700; 
+}
+.main-nav-item:hover > .appearance {
     display: block;
 }
+/* user menu */
 .action-menu {
     margin-left: auto;
     position: relative;
@@ -277,8 +291,9 @@ header .additional-wrap {
     border-radius: 16px;
     background-color: rgba(255, 255, 255, 0.2);
     display: inline-block;
-    padding-top: 8px;
+    padding-top: 9px;
     padding-left: 45px;
+    position: relative;
 }
 .action-menu-item a {
     text-decoration: none;
@@ -287,23 +302,69 @@ header .additional-wrap {
     width: 32px;
     padding-left: 0;
 }
-.search a {
-    font-size: 0;
-}
-.search svg {
-    fill: rgb(255, 255, 255);
-}
 .login {
     width: 92px;
-    background-image: url("../img/entrance.svg");
-    background-position-x: 16px;
 }
 .basket {
     width: 117px;
-    background-image: url("../img/basket.svg");
-    background-position-x: 16px;
     margin-right: 0;
 }
+.search a {
+    font-size: 0;
+}
+.action-menu-item svg {
+    position: absolute;
+    top: 7px;
+}
+.search svg {
+    width: 17px;
+    height: 17px;
+    left: 7px;
+}
+.login svg {
+    height: 19px;
+}
+.basket svg {
+    height: 20px;
+}
+.login svg,
+.basket svg {
+    width: 21px;
+    left: 16px;
+}
+.action-menu-item use {
+    fill: white;
+}
+.action-menu-item  path {
+    fill: inherit;
+}
+.action-menu-item:hover use {
+    fill: rgb(0, 0, 0);
+}
+.action-menu-item:hover a {
+    color: rgb(0, 0, 0);
+}
+.action-menu-item:hover {
+    background-color: rgb(248, 247, 244);
+}
+.action-menu .appearance {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    padding-top: 5px;
+    top: 100%;
+    right: 0;
+}
+.action-menu .appearance form {
+    background-color: rgb(248, 247, 244);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 20px;
+}
+.action-menu-item:hover > .appearance {
+    display: block;
+}
+/* блок телефон-часы работы */
 .info {
     position: absolute;
     top: 100%;
@@ -323,19 +384,6 @@ header .additional-wrap {
 .info > *{
     white-space: nowrap;
     float: right;  
-}
-.catalog-items,
-.features-list {
-    flex-wrap: wrap;
-}
-.news,
-.subscription {
-    width: 46.6%;
-    border-radius: 12px;
-}
-.additional-wrap,
-.address {
-    padding: 0 2.3% 0 2.3%;    
 }
 /* бонусы */
 .bonus {
@@ -403,6 +451,7 @@ header .additional-wrap {
 .catalog-items {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .catalog-item {
     width: 22.2%;
@@ -499,7 +548,7 @@ header .additional-wrap {
     border-radius: 12px;
     background: rgb(238, 225, 198) url("../img/wafer.jpg") repeat;
     color: rgb(0, 0, 0);
-    padding: 23px; /*уточнить */
+    padding: 29px 23px 26px 23px; /*уточнить */
     margin-bottom: 40px;
 }
 .features p {
@@ -547,6 +596,8 @@ header .additional-wrap {
 .subscription {
     min-height: 220px;
     color: black;
+    width: 46.6%;
+    border-radius: 12px;
 }
 .news a {
     color: black;
