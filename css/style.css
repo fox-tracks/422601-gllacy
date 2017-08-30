@@ -247,7 +247,7 @@ header .additional-wrap {
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     min-height: 172px;
-    padding: 0 9px 6px 6px;
+    padding: 0 0 6px 0;
 }
 .inner-menu a{
     color: black;
@@ -259,6 +259,7 @@ header .additional-wrap {
     height: 28px;
     white-space: nowrap;
     margin-bottom: 4px;
+    padding: 0 9px 6px 6px;
 }
 .inner-menu li:first-child {
     height: 38px;
@@ -271,6 +272,12 @@ header .additional-wrap {
 .inner-menu li:first-child a{
     line-height: 38px;
     font-weight: 700; 
+}
+.inner-menu li:hover {
+    background-color: rgb(251, 222, 215);
+}
+.inner-menu li:active {
+    background-color: rgb(246, 181, 165);
 }
 .main-nav-item:hover > .appearance {
     display: block;
@@ -645,6 +652,9 @@ header .additional-wrap {
     padding: 62px 0;
     z-index: 10;
     position: relative;
+}
+.map .appearance {
+    display: none;
 }
 .address {
     background-color: rgb(255, 255, 255);
