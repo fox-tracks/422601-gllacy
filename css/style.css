@@ -371,6 +371,10 @@ margin-bottom: 4px;
 .action-menu-item:hover > .appearance {
     display: block;
 }
+.basket-content {
+    width: 540px;
+    
+}
 /* блок телефон-часы работы */
 .info {
     position: absolute;
@@ -721,6 +725,7 @@ a.social-link svg {
     fill-opacity: 0.8;
     border: 2px solid rgba(255, 255, 255, 0.47);
     border-radius: 50%;
+    display: block;
 }
 a.social-link:hover svg,
 a.social-link:focus svg {
