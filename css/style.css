@@ -409,7 +409,7 @@ header nav {
     font-size: 13px;
     line-height: 24px;   
 }
-.action-menu input {
+input {
     padding: 1px 1px 1px 15px;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgba(178, 178, 178, 0.52);
@@ -426,11 +426,11 @@ header nav {
 .login input {
     margin-bottom: 20px;
 }
-.action-menu label {
+label {
     display: block;
     position: relative;
 }
-.action-menu span {
+form span {
     font-size: 14px;
     line-height: 44px;
     color: rgba(153, 153, 153, 0.52);
@@ -439,23 +439,23 @@ header nav {
     left: 15px;
     transition: 0.2s;
 }
-.action-menu input:hover{
+input:hover{
     border: 2px solid rgba(154, 154, 154, 0.52);
 }
-.action-menu input:focus + span,
-.action-menu input:valid + span {
+input:focus + span,
+input:valid + span {
     font-size: 11px;
     line-height: 13px;
     transform: translateY(-15px);
 }
-.action-menu input:focus + span {
+input:focus + span {
     color: rgba(91, 157, 223, 0.52);
 }
-.action-menu input:valid {
+input:valid {
     border: 1px solid rgba(178, 178, 178, 0.52);
 }
 
-.action-menu input:focus {
+input:focus {
     border: 2px solid rgba(46, 136, 228, 0.52);
     outline: none;
     padding: 0 0 0 14px;
@@ -762,10 +762,20 @@ header nav {
     min-height: 100%;
     background-color: rgb(248, 247, 244);
     border-radius: 12px;
-    padding: 23px;/* уточнить */
+    padding: 33px 28px 34px 22px;
+    display: flex;
+    flex-direction: column;
 }
 .subscription .btn {
     display: block;
+}
+.subscription-form {
+    display: flex;
+    margin-top: auto;
+}
+.subscription-form label {
+    margin-right: 10px;
+    flex-grow: 1;
 }
 /* адресный блок */
 .map {
