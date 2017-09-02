@@ -44,9 +44,19 @@ a.underline-main {
 a.underline-all {
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
+a.underline-all:hover,
+a.underline-all:active {
+    color: rgb(255, 188, 158);
+    border-bottom: 1px solid rgba(255, 188, 158, 0.32);
+}
 a.underline-white-bg{
     color: rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(234, 233, 231);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.32);
+}
+a.underline-white-bg:hover,
+a.underline-white-bg:active {
+    color: rgb(232, 77, 55);
+    border-bottom: 1px solid rgba(232, 77, 55, 0.32);
 }
 .subsection-title {
     margin: 0 0 20px 0;
@@ -358,7 +368,7 @@ header nav {
 .action-menu-item:hover use {
     fill: rgb(0, 0, 0);
 }
-.action-menu-item:hover a {
+.action-menu-item:hover > a {
     color: rgb(0, 0, 0);
 }
 .action-menu-item:hover {
