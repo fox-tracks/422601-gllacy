@@ -359,6 +359,9 @@ header nav {
     width: 21px;
     left: 16px;
 }
+.login .btn {
+    height: 44px;
+}
 .action-menu-item use {
     fill: white;
 }
@@ -382,7 +385,7 @@ header nav {
     top: 100%;
     right: 0;
 }
-.action-menu form {
+form {
     background-color: rgb(248, 247, 244);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
@@ -911,6 +914,19 @@ a.social-link:active svg {
     line-height: 18px;
     margin-left: auto;
     margin-top: 20px;
+}
+.feedback-form {
+    width: 478px;
+    background-color: rgb(248, 247, 244);
+    border-radius: 12px;
+}
+.feedback {
+    padding: 20px 25px 27px;
+
+}
+.feedback input {
+    width: 265px;
+    margin-bottom: 20px;
 }
 
 

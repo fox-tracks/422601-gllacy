@@ -284,30 +284,6 @@
                             <a href="tel:+781245202525">8 812 4520-25-25</a>
                             <p>(с 10 до 20 ежедневно)</p>
                             <a href="form.html" class="btn">Форма обратной связи</a>
-                            <section class="feedback-form appearance">
-                                <h2 class="visually-hidden">Форма обратной связи</h2>
-                                <p>Мы обязательно Вам ответим!</p>
-                                <button aria-label="Закрыть">
-                                    <svg width="18px" height="17px">
-                                        <use xlink:href="#cross-big"/>
-                                    </svg>
-                                </button>
-                                <form action="#" method="post" class="feedback">
-                                    <label>
-                                        <input type="text" name="feedback-name" id="feedback-name">
-                                        <span class="feedback-name">Как вас зовут?</span>
-                                    </label>
-                                    <label>
-                                        <input type="email" name="feedback-email" id="feedback-email">
-                                        <span class="feedback-email">Ваша почта для ответа?</span>
-                                    </label>
-                                    <label>
-                                        <textarea name="feedback-area" id="feedback-area" rows="10" cols="50"></textarea>
-                                        <span class="feedback-area">Напишите что-нибудь...</span>
-                                    </label>
-                                    <button type="submit" class="feedback-btn btn">Отправить</button>
-                                </form>
-                            </section>
                         </div>
                     </div>
                     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A96ef08014c5ecc45be357312642967627ab84193076956af534d5ba688052b48&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll=true"></script>
@@ -362,5 +338,29 @@
                     </div>
             </footer>
         </div>
+        <section class="feedback-form">
+            <h2 class="visually-hidden">Форма обратной связи</h2>
+            <p>Мы обязательно Вам ответим!</p>
+            <button aria-label="Закрыть">
+                <svg width="18px" height="17px">
+                    <use xlink:href="#cross-big"/>
+                </svg>
+            </button>
+            <form action="#" method="post" class="feedback">
+                <label>
+                    <input type="text" name="feedback-name" id="feedback-name" required>
+                    <span class="feedback-name">Как вас зовут?</span>
+                </label>
+                <label>
+                    <input type="email" name="feedback-email" id="feedback-email" required>
+                    <span class="feedback-email">Ваша почта для ответа?</span>
+                </label>
+                <label>
+                    <textarea name="feedback-area" id="feedback-area" rows="10" cols="50"></textarea>
+                    <span class="feedback-area">Напишите что-нибудь...</span>
+                </label>
+                <button type="submit" class="feedback-btn btn">Отправить</button>
+            </form>
+        </section>
     </body>
 </html>
