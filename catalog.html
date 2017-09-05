@@ -201,27 +201,31 @@
                     </div> 
                     <div class="fat-content-filter">
                         <div class="filter-title">Жирность:</div>
-                        <input type="radio" name="fatcontent" id="fatcontent0" value="0">
-                        <label for="fatcontent0">0%</label>
-                        <input type="radio" name="fatcontent" id="fatcontent10" value="10" checked>
-                        <label for="fatcontent10">до 10%</label>
-                        <input type="radio" name="fatcontent" id="fatcontent30" value="30">
-                        <label for="fatcontent30">до 30%</label>
-                        <input type="radio" name="fatcontent" id="fatcontent100" value="100">
-                        <label for="fatcontent100">выше 30%</label>
-                    </div>
+                        <div class="filter-wrapper">
+                            <input type="radio" name="fatcontent" id="fatcontent0" value="0">
+                            <label for="fatcontent0">0%</label>
+                            <input type="radio" name="fatcontent" id="fatcontent10" value="10" checked>
+                            <label for="fatcontent10">до 10%</label>
+                            <input type="radio" name="fatcontent" id="fatcontent30" value="30">
+                            <label for="fatcontent30">до 30%</label>
+                            <input type="radio" name="fatcontent" id="fatcontent100" value="100">
+                            <label for="fatcontent100">выше 30%</label>
+                        </div>
+                        </div>
                     <div class="fillers-filter">
                         <div class="filter-title">Наполнители:</div>
-                        <input type="checkbox" name="chocolate" id="chocolate" checked>
-                        <label for="chocolate">шоколадные</label>
-                        <input type="checkbox" name="sugar" id="sugar" checked>
-                        <label for="sugar">сахарные присыпки</label>
-                        <input type="checkbox" name="fruit" id="fruit">
-                        <label for="fruit">фрукты</label>
-                        <input type="checkbox" name="syrup" id="syrup">
-                        <label for="syrup">сиропы</label>
-                        <input type="checkbox" name="jam" id="jam">
-                        <label for="jam">джемы</label>
+                        <div class="filter-wrapper">
+                            <input type="checkbox" name="chocolate" id="chocolate" checked>
+                            <label for="chocolate">шоколадные</label>
+                            <input type="checkbox" name="sugar" id="sugar" checked>
+                            <label for="sugar">сахарные присыпки</label>
+                            <input type="checkbox" name="fruit" id="fruit">
+                            <label for="fruit">фрукты</label>
+                            <input type="checkbox" name="syrup" id="syrup">
+                            <label for="syrup">сиропы</label>
+                            <input type="checkbox" name="jam" id="jam">
+                            <label for="jam">джемы</label>
+                        </div>
                     </div>
                     <button type="submit" name="filters-form-btn" id="filters-form-btn" class="filters-btn">Применить</button>
                 </form>

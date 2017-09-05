@@ -96,7 +96,7 @@
                                 <div class="appearance">
                                     <form action="#" method="get">
                                         <label>
-                                            <input type="search" name="search" id="search" required>
+                                            <input type="search" name="search" id="search" class="text" required>
                                             <span class="search-label">Что ищем?</span>
                                         </label>    
                                     </form>
@@ -112,11 +112,11 @@
                                 <div class="appearance">
                                     <form action="#" method="post">
                                         <label>
-                                            <input type="email" name="email" id="email" required>
+                                            <input type="email" name="email" id="email" class="text" required>
                                             <span class="email">Электронная почта</span>
                                         </label>
                                         <label>
-                                            <input type="password" name="password" id="password" required>
+                                            <input type="password" name="password" id="password" class="text" required>
                                             <span class="password">Пароль</span>
                                         </label>
                                         <div class="form-actions">
@@ -264,7 +264,7 @@
                                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                                 <form action="#" method="post" class="subscription-form">
                                     <label>
-                                        <input type="email" name="subscription-email" id="subscription-email" required>
+                                        <input type="email" name="subscription-email" id="subscription-email" class="text" required>
                                         <span class="subscription-email">Электронная почта</span>
                                     </label>
                                     <button type="submit" class="btn">Отправить</button>
@@ -285,8 +285,12 @@
                             <p>(с 10 до 20 ежедневно)</p>
                             <a href="form.html" class="btn">Форма обратной связи</a>
                         </div>
+                        <div class="pin">Место на карте
+                            <svg width="80px" height="140px">
+                                <use xlink:href="#pin"/>
+                            </svg>
+                        </div>
                     </div>
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A96ef08014c5ecc45be357312642967627ab84193076956af534d5ba688052b48&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll=true"></script>
                 </section>
             </main>
             <footer class="layout-block">
@@ -338,7 +342,7 @@
                     </div>
             </footer>
         </div>
-        <section class="feedback-form">
+        <section class="feedback-block">
             <h2 class="visually-hidden">Форма обратной связи</h2>
             <p>Мы обязательно Вам ответим!</p>
             <button aria-label="Закрыть">
@@ -346,18 +350,18 @@
                     <use xlink:href="#cross-big"/>
                 </svg>
             </button>
-            <form action="#" method="post" class="feedback">
+            <form action="#" method="post" class="feedback-form">
                 <label>
-                    <input type="text" name="feedback-name" id="feedback-name" required>
+                    <input type="text" name="feedback-name" id="feedback-name" class="text" required>
                     <span class="feedback-name">Как вас зовут?</span>
                 </label>
                 <label>
-                    <input type="email" name="feedback-email" id="feedback-email" required>
+                    <input type="email" name="feedback-email" id="feedback-email" class="text" required>
                     <span class="feedback-email">Ваша почта для ответа?</span>
                 </label>
                 <label>
-                    <textarea name="feedback-area" id="feedback-area" rows="10" required></textarea>
-                    <span class="feedback-area">Напишите что-нибудь...</span>
+                    <textarea name="feedback-area" id="feedback-area" rows="10" class="feedback-area" required></textarea>
+                    <span class="feedback-text">Напишите что-нибудь...</span>
                 </label>
                 <button type="submit" class="feedback-btn btn">Отправить</button>
             </form>

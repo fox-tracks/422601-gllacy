@@ -88,7 +88,7 @@ li {
     padding: 0;
 }
 ul {
-    list-style-type: none;
+    list-style-type: none; /*переделать на классы*/
 }
 .btn{
     display: inline-block;
@@ -384,15 +384,20 @@ header nav {
     z-index: 3;
     padding-top: 5px;
 }
-form {
+/* формы */
+.action-menu form,
+.subscription form,
+.feedback-block form {
     padding-top: 20px;
-    padding-bottom: 20px;
     color: rgba(153, 153, 153, 0.52);
     font-size: 14px; 
     line-height: 16px;
     font-weight: 400;
     border-radius: 5px;
     background-color: rgb(248, 247, 244);
+}
+.action-menu form {
+    padding-bottom: 20px;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 .search form {
@@ -411,7 +416,7 @@ form {
     font-size: 13px;
     line-height: 24px;   
 }
-input {
+.text {
     width: 100%;
     height: 44px;
     padding: 1px 1px 1px 15px;
@@ -422,17 +427,22 @@ input {
     border: 1px solid rgba(178, 178, 178, 0.52);
     border-radius: 5px;
 }
-.search input {
+.search .text {
     margin-bottom: 1px;
 }
-.login input {
+.login .text {
     margin-bottom: 20px;
 }
-label {
+.action-menu label,
+.subscription label,
+.feedback-block label {
     display: block;
     position: relative;
 }
-form span {
+.login span,
+.search span,
+.subscription span,
+.feedback-form span {
     position: absolute;
     top: 0;
     left: 15px;
@@ -441,35 +451,68 @@ form span {
     color: rgba(153, 153, 153, 0.52);
     transition: 0.2s;
 }
-input:hover,
-.feedback textarea:hover {
+.text:hover,
+.feedback-area:hover {
     border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
-input:focus + span,
-input:valid + span,
-.feedback textarea:focus + span,
-.feedback textarea:valid + span {
+.text:focus + span,
+.text:valid + span,
+.feedback-area:focus + span,
+.feedback-area:valid + span {
     font-size: 11px;
     line-height: 13px;
     transform: translateY(-15px);
 }
-input:focus + span,
-.feedback textarea:focus + span {
+.text:focus + span,
+.feedback-area:focus + span {
     color: rgba(91, 157, 223, 0.52);
 }
-input:valid,
-.feedback textarea:valid {
+.text:valid,
+.feedback-area:valid {
     border: 1px solid rgba(178, 178, 178, 0.52);
 }
-input:focus,
-.feedback textarea:focus {
+.text:focus,
+.feedback-area:focus {
     padding: 0 0 0 14px;
     border: 2px solid rgba(46, 136, 228, 0.52);
     outline: none;
 }
 .action-menu-item:hover > .appearance {
     display: block;
+}
+.subscription .btn {
+    display: block;
+}
+.subscription-form {
+    display: flex;
+    margin-top: auto;
+}
+.subscription-form label {
+    margin-right: 10px;
+    flex-grow: 1;
+}
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+}
+.feedback-form input {
+    width: 265px;
+    margin-bottom: 20px;
+    margin-right: auto;
+}
+.feedback-form button {
+    margin-left: auto;
+}
+.feedback-form textarea {
+    align-self: stretch;
+    width: 100%;
+    height: 155px;
+    resize: none;
+    border: 1px solid rgba(178, 178, 178, 0.52);
+    border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 1px 1px 1px 15px;
 }
 .basket-content {
     width: 540px;   
@@ -573,13 +616,27 @@ td {
     font-weight: 500;
     margin-bottom: 40px;
 }
+.filters-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sort-by-filter,
+.price-range-filter,
+.fat-content-filter {
+    margin-right: 16px;
+}
 .filters select,
 .filters label,
 .filters .filters-btn {
-    background-color: rgba(255, 255, 255, 0.2);
     color: rgb(255, 255, 255);
     font-size: 16px;
     line-height: 18px; 
+}
+.filter-wrapper {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    height: 36px;
+    padding: 0 13px;
 }
 .price-range-filter,
 .price-range-filter input,
@@ -806,25 +863,10 @@ td {
     display: flex;
     flex-direction: column;
 }
-.subscription .btn {
-    display: block;
-}
-.subscription-form {
-    display: flex;
-    margin-top: auto;
-}
-.subscription-form label {
-    margin-right: 10px;
-    flex-grow: 1;
-}
-.subscription form {
-    box-shadow: none;
-    padding-bottom: 0;
-}
 /* адресный блок */
 .map {
     position: relative; 
-    background: rgb(226, 225, 206) url("../img/map.jpg") no-repeat;
+    background: url("../img/map.jpg") no-repeat center;
 }
 .map ymaps {
     position: absolute;
@@ -832,7 +874,7 @@ td {
     left: 0;
 }
 .map .layout-block {
-    padding: 62px 0;
+    padding: 62px 2.3%;
     z-index: 10;
     position: relative;
 }
@@ -846,7 +888,7 @@ td {
     min-height: 306px; 
     border-radius: 16px;
     padding: 31px 25px;
-    margin: 0 2.3% 0 auto;
+    margin: 0 0 0 auto;
     font-size: 14px;
     line-height: 20px;
 }
@@ -874,6 +916,12 @@ td {
 .map a.btn {
     display: block;
     padding: 10px 0;
+}
+.pin {
+    font-size: 0;
+    position: absolute;
+    top: 150px;
+    left: 250px;
 }
 /* подвал */
 footer.layout-block {
@@ -955,48 +1003,24 @@ a.social-link:active svg {
     line-height: 18px;
     margin-left: auto;
 }
-.feedback-form {
+.feedback-block {
     width: 478px;
     background-color: rgb(248, 247, 244);
     border-radius: 12px;
     padding: 20px 25px 27px;
     position: relative;
 }
-.feedback-form p {
+.feedback-block p {
     font-size: 24px;
     line-height: 28px;
     font-weight: 500;
     color: rgb(0, 0, 0);
 }
-.feedback-form > button {
+.feedback-block > button {
     border: none;
     padding: 0; 
     background: none; 
     position: absolute;
     top: 15px;
     right: 16px;
-}
-.feedback {
-    box-shadow: none;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 0;
-}
-.feedback input {
-    width: 265px;
-    margin-bottom: 20px;
-    margin-right: auto;
-}
-.feedback button {
-    margin-left: auto;
-}
-.feedback textarea {
-    align-self: stretch;
-    width: 100%;
-    height: 155px;
-    resize: none;
-    border: 1px solid rgba(178, 178, 178, 0.52);
-    border-radius: 5px;
-    margin-bottom: 25px;
-    padding: 1px 1px 1px 15px;
 }
