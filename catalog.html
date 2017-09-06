@@ -60,7 +60,7 @@
                     <h3 class="visually-hidden">Главное меню</h3>
                     <ul class="main-nav-list">
                         <li class="main-nav-item">
-                            <a href="catalog.html" class="main-nav-link">Каталог</a>
+                            <a href="catalog.html" class="main-nav-link underline-main">Каталог</a>
                             <div class="appearance">
                                 <ul class="inner-menu">
                                     <li><a href="#">Новинки</a></li>
@@ -72,10 +72,10 @@
                             </div>
                         </li>
                         <li class="main-nav-item">
-                            <a href="#" class="main-nav-link">Доставка и оплата</a>
+                            <a href="#" class="main-nav-link underline-main">Доставка и оплата</a>
                         </li>
                         <li class="main-nav-item">
-                            <a href="#" class="main-nav-link">О компании</a>
+                            <a href="#" class="main-nav-link underline-main">О компании</a>
                         </li>
                     </ul>
                 </nav>
@@ -92,8 +92,8 @@
                             <div class="appearance">
                                 <form action="#" method="get">
                                     <label>
-                                        <input type="search" name="search" id="search">
-                                        <span class="search">Что ищем?</span>
+                                        <input type="search" name="search" id="search" class="text" required>
+                                        <span>Что ищем?</span>
                                     </label>    
                                 </form>
                             </div>
@@ -108,17 +108,19 @@
                             <div class="appearance">
                                 <form action="#" method="post">
                                     <label>
-                                        <input type="email" name="email" id="email" required>
-                                        <span class="email">Электронная почта</span>
+                                        <input type="email" name="email" id="email" class="text" required>
+                                        <span>Электронная почта</span>
                                     </label>
                                     <label>
-                                        <input type="password" name="password" id="password" required>
-                                        <span class="password">Пароль</span>
+                                        <input type="password" name="password" id="password" class="text" required>
+                                        <span>Пароль</span>
                                     </label>
-                                    <button type="submit" class="btn">Войти</button>
-                                    <div class="remember-pass">
-                                        <a href="#">Забыли пароль? </a><br>
-                                        <a href="#">Новая регистрация</a>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn">Войти</button>
+                                        <div class="remember-pass">
+                                            <a href="#" class="underline-white-bg">Забыли пароль? </a><br>
+                                            <a href="#" class="underline-white-bg">Новая регистрация</a>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -191,9 +193,8 @@
                         <div class="price-controls">                        
                             <label>
                                 <input type="text" name="price-range-min" id="price-range-min" value="100">
-                                руб.
+                                руб. -
                             </label>
-                            <span>-</span>
                             <label>
                                 <input type="text" name="price-range-max" id="price-range-max" value="500">
                                 руб.
@@ -255,7 +256,7 @@
                             <span>310</span>&#8381;/кг
                         </div>
                     </a>
-                    <p class="item-name"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
+                    <p class="item-name"><a href="#" class="underline-all">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
                     <a href="#" class="btn">Быстрый просмотр</a>
                 </article>
                 <article class="catalog-item">
@@ -265,7 +266,7 @@
                             <span>380</span>&#8381;/кг
                         </div>
                     </a>
-                    <p class="item-name"><a href="#">Сливочно-кофейное с кусочками шоколада</a></p>
+                    <p class="item-name"><a href="#" class="underline-all">Сливочно-кофейное с кусочками шоколада</a></p>
                     <a href="#" class="btn">Быстрый просмотр</a>
                 </article>
                 <article class="catalog-item">
@@ -275,7 +276,7 @@
                             <span>355</span>&#8381;/кг
                         </div>
                     </a>
-                    <p class="item-name"><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
+                    <p class="item-name"><a href="#" class="underline-all">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
                     <a href="#" class="btn">Быстрый просмотр</a>
                 </article>
                 <article class="catalog-item">
@@ -285,7 +286,7 @@
                             <span>415</span>&#8381;/кг
                         </div>
                     </a>
-                    <p class="item-name"><a href="#">Сливочное крем-брюле с карамельной подливкой</a></p>
+                    <p class="item-name"><a href="#" class="underline-all">Сливочное крем-брюле с карамельной подливкой</a></p>
                     <a href="#" class="btn">Быстрый просмотр</a>
                 </article>
                 <article class="catalog-item">
@@ -295,7 +296,7 @@
                             <span>325</span>&#8381;/кг
                         </div>
                     </a>    
-                    <p class="item-name"><a href="#">Сливочное с брусничным джемом</a></p>
+                    <p class="item-name"><a href="#" class="underline-all">Сливочное с брусничным джемом</a></p>
                     <a href="#" class="btn">Быстрый просмотр</a>
                 </article>
                 <article class="catalog-item">
@@ -305,7 +306,7 @@
                             <span>410</span>&#8381;/кг
                         </div>
                     </a>
-                    <p class="item-name"><a href="#">Сливочное-черничное с цельными ягодами черники</a></p>
+                    <p class="item-name"><a href="#" class="underline-all">Сливочное-черничное с цельными ягодами черники</a></p>
                     <a href="#" class="btn">Быстрый просмотр</a>
                 </article>
                 <article class="catalog-item">
@@ -315,7 +316,7 @@
                             <span>375</span>&#8381;/кг
                         </div>
                     </a>
-                    <p class="item-name"><a href="#">Сливочное-лимонное с карамельной присыпкой</a></p>
+                    <p class="item-name"><a href="#" class="underline-all">Сливочное-лимонное с карамельной присыпкой</a></p>
                     <a href="#" class="btn">Быстрый просмотр</a>
                 </article>
                 <article class="catalog-item">
@@ -325,7 +326,7 @@
                             <span>320</span>&#8381;/кг
                         </div>
                     </a>
-                    <p class="item-name"><a href="#">Сливочное с шоколадной стружкой</a></p>
+                    <p class="item-name"><a href="#" class="underline-all">Сливочное с шоколадной стружкой</a></p>
                     <a href="#" class="btn">Быстрый просмотр</a>
                 </article>
                 <article class="catalog-item">
@@ -335,7 +336,7 @@
                             <span>440</span>&#8381;/кг
                         </div>
                     </a>
-                    <p class="item-name"><a href="#">Сливочное-ванильное с кусочками шоколада</a></p>
+                    <p class="item-name"><a href="#" class="underline-all">Сливочное-ванильное с кусочками шоколада</a></p>
                     <a href="#" class="btn">Быстрый просмотр</a>
                 </article> 
                 <article class="catalog-item">
@@ -345,7 +346,7 @@
                             <span>435</span>&#8381;/кг
                         </div>
                     </a>
-                    <p class="item-name"><a href="#">Сливочное с ментоловым сиропом</a></p>
+                    <p class="item-name"><a href="#" class="underline-all">Сливочное с ментоловым сиропом</a></p>
                     <a href="#" class="btn">Быстрый просмотр</a>
                 </article>
                 <article class="catalog-item">
@@ -355,7 +356,7 @@
                             <span>355</span>&#8381;/кг
                         </div>
                     </a>
-                    <p class="item-name"><a href="#">Сливочное с кусочками черного шоколада</a></p>
+                    <p class="item-name"><a href="#" class="underline-all">Сливочное с кусочками черного шоколада</a></p>
                     <a href="#" class="btn">Быстрый просмотр</a>
                 </article> 
                 <article class="catalog-item">
@@ -365,7 +366,7 @@
                             <span>420</span>&#8381;/кг
                         </div>
                     </a>
-                    <p class="item-name"><a href="#">Сливочное с мятным сиропом</a></p>
+                    <p class="item-name"><a href="#" class="underline-all">Сливочное с мятным сиропом</a></p>
                     <a href="#" class="btn">Быстрый просмотр</a>
                 </article>                   
             </section>
@@ -416,15 +417,15 @@
                 <section class="additional-links">
                     <h3 class="visually-hidden">Дополнительные ссылки</h3>
                     <ul class="additional-links-list">
-                        <li><a href="#">Для поставщиков</a></li>
-                        <li><a href="#">Наши документы</a></li>
-                        <li><a href="#">О производстве</a></li>
-                        <li><a href="#">Экологические стандарты</a></li>
+                        <li><a href="#" class="underline-all">Для поставщиков</a></li>
+                        <li><a href="#" class="underline-all">Наши документы</a></li>
+                        <li><a href="#" class="underline-all">О производстве</a></li>
+                        <li><a href="#" class="underline-all">Экологические стандарты</a></li>
                     </ul>
                 </section>
                 <div class="academy">
                     <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" alt="Логотип Академии" width="108" height="39"></a>
-                    <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a><span> &#169; </span><span>2017</span></p>
+                    <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="underline-all">HTML Academy</a><span> &#169; </span><span>2017</span></p>
                 </div>   
         </footer>
     </body>
