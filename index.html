@@ -285,11 +285,6 @@
                             <p>(с 10 до 20 ежедневно)</p>
                             <a href="form.html" class="btn">Форма обратной связи</a>
                         </div>
-                        <div class="pin">Место на карте
-                            <svg width="80px" height="140px">
-                                <use xlink:href="#pin"/>
-                            </svg>
-                        </div>
                     </div>
                 </section>
             </main>
@@ -342,29 +337,31 @@
                     </div>
             </footer>
         </div>
-        <section class="feedback-block">
-            <h2 class="visually-hidden">Форма обратной связи</h2>
-            <p>Мы обязательно Вам ответим!</p>
-            <button aria-label="Закрыть">
-                <svg width="18px" height="17px">
-                    <use xlink:href="#cross-big"/>
-                </svg>
-            </button>
-            <form action="#" method="post" class="feedback-form">
-                <label>
-                    <input type="text" name="feedback-name" id="feedback-name" class="text" required>
-                    <span class="feedback-name">Как вас зовут?</span>
-                </label>
-                <label>
-                    <input type="email" name="feedback-email" id="feedback-email" class="text" required>
-                    <span class="feedback-email">Ваша почта для ответа?</span>
-                </label>
-                <label>
-                    <textarea name="feedback-area" id="feedback-area" rows="10" class="feedback-area" required></textarea>
-                    <span class="feedback-text">Напишите что-нибудь...</span>
-                </label>
-                <button type="submit" class="feedback-btn btn">Отправить</button>
-            </form>
+        <section class="feedback-background">
+            <div class="feedback-block">
+                <h2 class="visually-hidden">Форма обратной связи</h2>
+                <p>Мы обязательно Вам ответим!</p>
+                <button aria-label="Закрыть">
+                    <svg width="18px" height="17px">
+                        <use xlink:href="#cross-big"/>
+                    </svg>
+                </button>
+                <form action="#" method="post" class="feedback-form">
+                    <label>
+                        <input type="text" name="feedback-name" id="feedback-name" class="text" required>
+                        <span class="feedback-name">Как вас зовут?</span>
+                    </label>
+                    <label>
+                        <input type="email" name="feedback-email" id="feedback-email" class="text" required>
+                        <span class="feedback-email">Ваша почта для ответа?</span>
+                    </label>
+                    <label>
+                        <textarea name="feedback-area" id="feedback-area" rows="10" class="feedback-area" required></textarea>
+                        <span class="feedback-text">Напишите что-нибудь...</span>
+                    </label>
+                    <button type="submit" class="feedback-btn btn">Отправить</button>
+                </form>
+            </div>
         </section>
     </body>
 </html>

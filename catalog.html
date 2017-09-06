@@ -188,16 +188,32 @@
                     </div>
                     <div class="price-range-filter">
                         <div class="filter-title">Цена:</div>
-                        <label>
-                            <input type="text" name="price-range-min" id="price-range-min" value="100">
-                            руб.
-                        </label>
-                        <span>-</span>
-                        <label>
-                            <input type="text" name="price-range-max" id="price-range-max" value="500">
-                            руб.
-                        </label>
-                        <!--здесь будут ползунки-->
+                        <div class="price-controls">                        
+                            <label>
+                                <input type="text" name="price-range-min" id="price-range-min" value="100">
+                                руб.
+                            </label>
+                            <span>-</span>
+                            <label>
+                                <input type="text" name="price-range-max" id="price-range-max" value="500">
+                                руб.
+                            </label>
+                        </div>
+                        <div class="range-controls">
+                            <div class="scale">
+                                <div class="bar"></div>
+                            </div>
+                            <div class="toggle toggle-min">
+                                <svg width="20px" height="23px">
+                                    <use xlink:href="#filter-button"/>
+                                </svg>
+                            </div>
+                            <div class="toggle toggle-max">
+                                <svg width="20px" height="23px">
+                                    <use xlink:href="#filter-button"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div> 
                     <div class="fat-content-filter">
                         <div class="filter-title">Жирность:</div>

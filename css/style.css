@@ -632,12 +632,36 @@ td {
     font-size: 16px;
     line-height: 18px; 
 }
-.filter-wrapper {
+.filter-wrapper,
+.range-controls {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 18px;
     height: 36px;
     padding: 0 13px;
 }
+.price-controls {
+    margin-bottom: 5px;
+}
+.range-controls {
+    position: relative;
+    width: 218px;
+    padding: 16px 21px 0;
+}
+.range-controls .scale {
+    height: 4px;
+    background: rgb(209, 218, 211);
+}
+.range-controls .bar {
+    width: 50%;
+    height: 4px;
+    background-color: rgb(248, 247, 244);
+}
+.range-controls .toggle {
+    position: absolute;
+    top:  50%;
+    transform: translateY(-10px);
+}
+
 .price-range-filter,
 .price-range-filter input,
 .price-range-filter label {
@@ -878,9 +902,6 @@ td {
     z-index: 10;
     position: relative;
 }
-.map .appearance {
-    display: none;
-}
 .address {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -916,12 +937,6 @@ td {
 .map a.btn {
     display: block;
     padding: 10px 0;
-}
-.pin {
-    font-size: 0;
-    position: absolute;
-    top: 150px;
-    left: 250px;
 }
 /* подвал */
 footer.layout-block {
@@ -1003,12 +1018,26 @@ a.social-link:active svg {
     line-height: 18px;
     margin-left: auto;
 }
+/* модальное окно*/
+.feedback-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.302);
+}
 .feedback-block {
     width: 478px;
     background-color: rgb(248, 247, 244);
     border-radius: 12px;
     padding: 20px 25px 27px;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .feedback-block p {
     font-size: 24px;
