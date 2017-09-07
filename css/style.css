@@ -775,6 +775,7 @@ td {
     opacity: 0.25;
 }
 .filters-btn {
+    font-family: "Roboto", "Tahoma", sans-serif;
     border: 2px solid rgb(255, 255, 255);
     padding: 0 31px;
 }
