@@ -730,7 +730,7 @@ td {
 .fatcontent-label:not(:last-of-type) {
     margin-right: 15px;
 }
-.fillers-label:not(last-of-type) {
+.fillers-label:not(:last-of-type) {
     margin-right: 17px;
 }
 .fatcontent-label::before,
@@ -747,7 +747,7 @@ td {
     margin-right: 10px;
 }
 .fillers-label::before {
-    margin-right: 13px;
+    margin-right: 12px;
 }
 .fatcontent-label::before {
     background-image: url("../img/radio-off.svg");
@@ -758,7 +758,6 @@ td {
     width: 20px;
     height: 20px;
     background-image: url("../img/checkbox-off.svg");
-    margin-right: 9px;
 }
 .fatcontent-label:hover::before,
 .fillers-label:hover::before {
@@ -769,7 +768,10 @@ td {
 }
 .fillers-checkbox:checked + .fillers-label::before {
     background-image: url("../img/checkbox-on.svg");
+    width: 23px;
+    margin-right: 9px;
 }
+
 .fatcontent-radiobtn:disabled + .fatcontent-label::before,
 .fillers-checkbox:disabled + .fillers-label::before {
     opacity: 0.25;
