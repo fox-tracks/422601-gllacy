@@ -613,7 +613,6 @@ td {
 .filters {
     font-size: 14px;
     line-height: 16px;   
-    font-weight: 500;
     margin-bottom: 40px;
 }
 .filters-form {
@@ -662,9 +661,6 @@ td {
     width: 194px;
     border: none;
     font-family: "Roboto", "Tahoma", sans-serif;
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 500;
     -webkit-appearance: none;
     background-image: url("../img/select-arrow.svg");
     background-repeat: no-repeat;
@@ -731,9 +727,11 @@ td {
 .fillers-checkbox {
     display: none;
 }
-.fatcontent-label:not(:last-of-type),
-.fillers-label:not(last-of-type) {
+.fatcontent-label:not(:last-of-type) {
     margin-right: 15px;
+}
+.fillers-label:not(last-of-type) {
+    margin-right: 17px;
 }
 .fatcontent-label::before,
 .fillers-label::before {
@@ -742,7 +740,14 @@ td {
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.8;
+    margin-top: 7px;
+    vertical-align: bottom;
+}
+.fatcontent-label::before {
     margin-right: 10px;
+}
+.fillers-label::before {
+    margin-right: 13px;
 }
 .fatcontent-label::before {
     background-image: url("../img/radio-off.svg");
@@ -753,6 +758,7 @@ td {
     width: 20px;
     height: 20px;
     background-image: url("../img/checkbox-off.svg");
+    margin-right: 9px;
 }
 .fatcontent-label:hover::before,
 .fillers-label:hover::before {
@@ -764,9 +770,25 @@ td {
 .fillers-checkbox:checked + .fillers-label::before {
     background-image: url("../img/checkbox-on.svg");
 }
+.fatcontent-radiobtn:disabled + .fatcontent-label::before,
+.fillers-checkbox:disabled + .fillers-label::before {
+    opacity: 0.25;
+}
 .filters-btn {
+    border: 2px solid rgb(255, 255, 255);
+    padding: 0 31px;
+}
+.filters-btn:hover,
+.filters-btn:focus {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    outline: none;
+}
+.filters-btn:active {
     border: none;
-    font-weight: 500;
+    padding: 0 33px;
+    background-color: rgb(237, 237, 237);
+    box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
 }
 /* популярные товары и каталог */
 .popular-items,
