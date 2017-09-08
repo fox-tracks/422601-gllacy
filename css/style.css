@@ -901,8 +901,13 @@ td {
     bottom: 18px;
     left: 0;
     font-size: 45px;
+    line-height: 45px;
     font-weight: 700;
 }
+.item-price svg {
+    margin-bottom: -2px;
+}
+
 .popular-items .item-container::before {
     display: block;
     content: "";
