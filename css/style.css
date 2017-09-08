@@ -338,7 +338,9 @@ header nav {
 .search a {
     font-size: 0;
 }
-.action-menu-item svg {
+.search svg,
+.login svg,
+.basket-link svg {
     position: absolute;
     top: 7px;
 }
@@ -350,11 +352,11 @@ header nav {
 .login svg {
     height: 19px;
 }
-.basket svg {
+.basket-link svg {
     height: 20px;
 }
 .login svg,
-.basket svg {
+.basket-link svg {
     width: 21px;
     left: 16px;
 }
@@ -515,7 +517,7 @@ header nav {
     padding: 1px 1px 1px 15px;
 }
 .basket-content {
-    width: 540px;   
+    width: 508px;   
 }
 /* блок телефон-часы работы */
 .info {
@@ -577,37 +579,57 @@ header nav {
     font-size: 14px;
     line-height: 16px;    
 }
-.basket .appearance {
+.basket-wrapper {
     width: 540px;
     padding: 10px 16px 20px;
     color: rgb(50, 50, 50);
     font-size: 13px;
     line-height: 16px;
+    font-weight: 400;
     background-color: rgb(248, 247, 244);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 
 }
-table,
+.basket-content,
 td {
     border: 1px solid black;
     border-collapse: collapse;
+}
+.basket-content td {
+    vertical-align: top;
+    padding-top: 12px;
+    padding-bottom: 26px;
+}
+.cross-cell {
+    width: 13px;
 
 }
-.cross {
-    width: 13px;
-}
 .icecream-image-small{
-    width: 45px;
+    width: 54px;
+}
+.icecream-image-small img {
+    border-radius: 50%;
+    width: 100%;
 }
 .icecream-name {
-    width: 235px;
+    width: 236px;
+
 }
 .icecream-price {
-    width: 131px;
+    width: 122px;
 }
 .icecream-total {
-    width: 80px;
+    width: 82Spx;
+}
+.basket-total {
+    text-align: right;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+}
+.basket-btn {
+    text-align: right;
 }
 /* фильтры */
 .filters {
