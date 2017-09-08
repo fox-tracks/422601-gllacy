@@ -587,21 +587,26 @@ header nav {
     font-size: 14px;
     line-height: 16px;    
     margin-bottom: 5px;
-    margin-right: 22px;
 }
 .breadcrumbs a {
     text-decoration: none;
+    margin-right: 22px;
+    position: relative;
 }
-.breadcrumbs a::after {
+.breadcrumbs a:not(:first-child)::before {
     display: inline-block;
     content:"";
-    width: 6px;
+    width: 7px;
     height: 7px;
-    background-color: red;
-    padding-left: 8px;
+    position: absolute;
+    top: 6px;
+    left: -16px;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-right-small.svg"),
+                      url("../img/icon-right-small.svg");
+    background-position: 0 0, 2px 0;
+    background-size: contain;
 }
-
-
 .catalog-page-title {
     margin-bottom: 26px;
 }
