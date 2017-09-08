@@ -316,8 +316,6 @@ header nav {
     position: relative;
     height: 32px;
     margin: 0 5px; /* переделать отступы */
-    padding-top: 9px;
-    padding-left: 45px;
     border-radius: 16px;
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -328,6 +326,12 @@ header nav {
     width: 32px;
     padding-left: 0;
 }
+.search a {
+    font-size: 0;
+    display: block;
+    padding: 14px 16px 2px;
+
+}
 .login {
     width: 92px;
 }
@@ -335,8 +339,12 @@ header nav {
     width: 117px;
     margin-right: 0;
 }
-.search a {
-    font-size: 0;
+.login > a,
+.basket > a {
+    display: block;
+    padding-top: 9px;
+    padding-left: 45px;
+    padding-bottom: 9px;
 }
 .search svg,
 .login svg,
@@ -578,7 +586,26 @@ header nav {
 .breadcrumbs {
     font-size: 14px;
     line-height: 16px;    
+    margin-bottom: 5px;
+    margin-right: 22px;
 }
+.breadcrumbs a {
+    text-decoration: none;
+}
+.breadcrumbs a::after {
+    display: inline-block;
+    content:"";
+    width: 6px;
+    height: 7px;
+    background-color: red;
+    padding-left: 8px;
+}
+
+
+.catalog-page-title {
+    margin-bottom: 26px;
+}
+/* корзина*/
 .basket-wrapper {
     width: 540px;
     padding: 10px 16px 20px;
@@ -1186,7 +1213,7 @@ a.social-link:active svg {
 }
 /* модальное окно*/
 .feedback-background {
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
