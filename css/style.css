@@ -1006,8 +1006,8 @@ td {
     text-align: center;
     text-decoration: none;
 }
-.paginator a.disabled {
-    opacity: 0.2;
+a.disabled svg{
+    fill: rgba(255, 255, 255, 0.2);
 }
 .paginator a.current {
     color: rgb(0, 0, 0);
@@ -1016,17 +1016,19 @@ td {
 .paginator .prev {
     transform: rotate(180deg);
 }
-.paginator a:hover {
+.paginator a:not(.disabled):hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
-.paginator a.next:active path {
+a.next svg {
+    fill: rgb(255, 255, 255);
+}
+a.next:active svg {
     fill: rgb(0, 0, 0);
 }
-.paginator a:active {
+.paginator a:not(.disabled):active {
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
 }
-
 /* блок достоинства    */
 .features {
     border-radius: 12px;
