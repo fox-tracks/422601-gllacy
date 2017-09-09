@@ -38,7 +38,7 @@ body {
 a {
     color: rgb(255, 255, 255);
 }
-a.underline-main {
+.underline-main {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 a.underline-all {
@@ -138,24 +138,16 @@ ul {
     min-height: 100%;
     min-width: 900px;
 }
-.slider p {
-    font-size: 60px;
-    line-height: 60.35px;
-    font-weight: 700;
-    margin: 316px 0 26px 0;
-}
-.slider a.btn {
-    font-size: 32px;
-    line-height: 44px;
-    border-radius: 32px;
-    padding: 10px 41px 10px 41px;
-}
 .slider {
     min-height: 584px;
     margin-bottom: -20px;
     position: relative;
 }
 .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     background-repeat: no-repeat;
     background-position: center top; 
     width: 100%;
@@ -165,6 +157,20 @@ ul {
     text-align: center;
     opacity: 0;
     transition: opacity 1.4s;
+}
+.slide p {
+    max-width: 675px;
+    font-size: 60px;
+    line-height: 60.35px;
+    font-weight: 700;
+    margin: auto 0 26px 0;
+}
+.slide a.btn {
+    font-size: 32px;
+    line-height: 44px;
+    border-radius: 32px;
+    padding: 10px 41px 10px 41px;
+    margin-bottom: 61px;
 }
 .slide-green {
     background-image: url("../img/ice-cream1.png"); 
@@ -231,25 +237,32 @@ header nav {
 .main-nav-item:first-child {
     margin-left: 7px;
 }
-.main-nav-item {
+.main-nav-link {
     min-height: 32px;
-    padding: 0 14px 8px 14px;
+    padding: 6px 14px 8px 14px;
     border-radius: 16px;
-}
-.main-nav-item > a {
     display: block;
-    padding-top: 6px;
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
-.main-nav-item:hover {
-    background-color: rgb(247, 246, 243);
+.main-nav-link.active {
+    background-color: rgb(208, 112, 88);
 }
-.main-nav-item:hover > a {
+.main-nav-link:hover {
+    background-color: rgb(247, 246, 243);
     color: rgb(0, 0, 0);
+}
+.main-nav-link:hover .underline-main,
+.main-nav-link.active .underline-main {
+    border: none;
+}
+.main-nav-link:active {
+    background-color: rgb(237, 237, 237);
+    box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
+
 }
 .main-nav-item:last-child {
     margin-right: 0;
@@ -279,12 +292,15 @@ header nav {
     color: black;
     text-decoration: none;
 }
-.inner-menu li:first-child a{
-    margin: 0 9px 0 6px;
-    padding: 0 11px 0 14px;
-    border-bottom: 1px solid rgb(209, 208, 206);
+.inner-menu .new-items-link{
     line-height: 38px;
     font-weight: 700; 
+}
+.inner-menu .new-items-link::after {
+    margin: 0 -11px 0 -14px;
+    display: block;
+    content: "";
+    border-bottom: 1px solid rgb(209, 208, 206);
 }
 .inner-menu li {
     margin: 3px 0 1px 0;
@@ -292,10 +308,10 @@ header nav {
 .inner-menu li:first-child {
     margin: 0;
 }
-.inner-menu li:hover {
+.inner-menu a:hover {
     background-color: rgb(251, 222, 215);
 }
-.inner-menu li:active {
+.inner-menu a:active {
     background-color: rgb(246, 181, 165);
 }
 .main-nav-item:hover > .appearance {
@@ -316,11 +332,12 @@ header nav {
     position: relative;
     height: 32px;
     margin: 0 5px; /* переделать отступы */
-    border-radius: 16px;
-    background-color: rgba(255, 255, 255, 0.2);
+
 }
 .action-menu-item a {
     text-decoration: none;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 .search {
     width: 32px;
@@ -345,6 +362,9 @@ header nav {
     padding-top: 9px;
     padding-left: 45px;
     padding-bottom: 9px;
+}
+.action-menu-item .basket-with-items {
+    background-color: rgb(247, 246, 243);
 }
 .search svg,
 .login svg,
@@ -377,13 +397,14 @@ header nav {
 .action-menu-item  path {
     fill: inherit;
 }
-.action-menu-item:hover use {
+.action-menu-item a:hover use {
     fill: rgb(0, 0, 0);
 }
-.action-menu-item:hover > a {
+.action-menu-item > a:hover, 
+.action-menu-item .basket-with-items {
     color: rgb(0, 0, 0);
 }
-.action-menu-item:hover {
+.action-menu-item > a:hover{
     background-color: rgb(248, 247, 244);
 }
 .action-menu .appearance {
@@ -873,6 +894,9 @@ td {
     flex-wrap: wrap;
     align-items: flex-start;
 }
+.catalog-items {
+    margin-bottom: 44px;
+}
 .catalog-item {
     position: relative;
     width: 23.35%;
@@ -982,20 +1006,20 @@ td {
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
 }
+.paginator .prev {
+    transform: rotate(180deg);
+}
 .paginator a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
-.paginator a.next:hover {
-    background-color: transparent;
+.paginator a.next:active path {
+    fill: rgb(0, 0, 0);
 }
 .paginator a:active {
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
 }
-.paginator a:active:not(current) .paginator a.current {
-    color: rgb(255, 255, 255);
-    background-color: transparent;
-}
+
 /* блок достоинства    */
 .features {
     border-radius: 12px;
@@ -1196,6 +1220,9 @@ a.social-link:active svg {
     align-content: center;
     max-width: 305px;
     margin-left: 29px;   
+}
+.additional-links-list li {
+    margin-bottom: 7px;
 }
 .additional-links-list li:nth-child(2n-1) {
     flex-basis: 46%;
