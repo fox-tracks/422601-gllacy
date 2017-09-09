@@ -332,12 +332,19 @@ header nav {
     position: relative;
     height: 32px;
     margin: 0 5px; /* переделать отступы */
-
 }
 .action-menu-item a {
     text-decoration: none;
+}
+.action-menu-item > a {
     border-radius: 16px;
     background-color: rgba(255, 255, 255, 0.2);
+}
+.remember-pass {
+    margin-left: 20px;
+}
+.remember-pass a {
+    display: inline-block;
 }
 .search {
     width: 32px;
