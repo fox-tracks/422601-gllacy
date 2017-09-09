@@ -838,7 +838,7 @@ td {
     display: inline-block;
     content: "";  
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto 20px;
     opacity: 0.8;
     margin-top: 7px;
     vertical-align: bottom;
@@ -846,16 +846,13 @@ td {
 .fatcontent-label::before {
     margin-right: 10px;
 }
-.fillers-label::before {
-    margin-right: 12px;
-}
 .fatcontent-label::before {
     background-image: url("../img/radio-off.svg");
     width: 22px;
     height: 22px;
 }
 .fillers-label::before {
-    width: 20px;
+    width: 33px;
     height: 20px;
     background-image: url("../img/checkbox-off.svg");
 }
@@ -868,8 +865,6 @@ td {
 }
 .fillers-checkbox:checked + .fillers-label::before {
     background-image: url("../img/checkbox-on.svg");
-    width: 23px;
-    margin-right: 9px;
 }
 
 .fatcontent-radiobtn:disabled + .fatcontent-label::before,
