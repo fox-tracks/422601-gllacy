@@ -56,7 +56,8 @@
         <input type="radio" name="wrap" id="wrap-purple" class="check-slide">
         <div class="wrapper">
             <header class="layout-block">
-                <h1 class="visually-hidden">Магазин мороженого Gllacy Shop</h1>
+                <div class="additional-wrapper">
+                    <h1 class="visually-hidden">Магазин мороженого Gllacy Shop</h1>
                     <a class="header-logo">
                         <img src="img/logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
                     </a>
@@ -143,10 +144,11 @@
                             <a href="tel:+78124502525">8 812 450-25-25</a>
                         </div>
                     </nav>
+                </div>
             </header>
             <main>
                 <div class="layout-block">
-                    <section class="slider">
+                    <section class="slider additional-wrapper">
                         <h2 class="visually-hidden">Промо-предложения</h2>
                         <div class="slide slide-green">
                             <p>Крем-брюле и пломбир с малиновым джемом</p>    
@@ -166,7 +168,7 @@
                             <label for="wrap-purple" class="label-purple" tabindex="0"></label>
                         </div>
                     </section>
-                    <section class="bonus">
+                    <section class="bonus additional-wrapper">
                         <h2 class="visually-hidden">Бонусы</h2>
                         <section class="bonus-confiture">
                             <h3 class="subsection-title">Малинка даром!</h3>
@@ -179,7 +181,7 @@
                             <a href="#" class="btn">Хочу шоколадки!</a>
                         </section>
                     </section>
-                    <section class="popular-items">
+                    <section class="popular-items additional-wrapper">
                         <h2 class="visually-hidden">Популярные товары</h2>
                         <article class="catalog-item">
                             <a href="#" class="item-container">
@@ -234,7 +236,7 @@
                             <a href="#" class="btn">Быстрый просмотр</a>
                         </article>
                     </section>
-                    <section class="features">
+                    <section class="features additional-wrapper">
                         <h2 class="visually-hidden">Наши преимущества</h2>
                         <p class="general-info">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</p>
                         <ul class="features-list">
@@ -252,7 +254,7 @@
                             </li>
                         </ul>
                     </section>
-                    <section class="news-block">
+                    <section class="news-block additional-wrapper">
                         <h2 class="visually-hidden">Новостной блок и подписка</h2>
                         <article class="news">
                             <h3 class="clause-title">Новое в нашем блоге</h3>
@@ -283,12 +285,13 @@
                             <p>Для заказов по телефону:</p>
                             <a href="tel:+781245202525" class="tel">8 812 4520-25-25</a>
                             <p>(с 10 до 20 ежедневно)</p>
-                            <a href="form.html" class="btn">Форма обратной связи</a>
+                            <a href="form.html" class="feedback-link btn">Форма обратной связи</a>
                         </div>
                     </div>
                 </section>
             </main>
             <footer class="layout-block">
+                <div class="additional-wrapper">
                     <section class="social-networks">
                         <h3 class="visually-hidden">Мы в соцсетях</h3>
                         <ul class="social-networks-list">
@@ -335,29 +338,30 @@
                         <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" alt="Логотип Академии" width="108" height="39"></a>
                         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="underline-all">HTML Academy</a><span> &#169; </span><span>2017</span></p>
                     </div>
+                </div>
             </footer>
         </div>
         <section class="feedback-background">
             <div class="feedback-block">
                 <h2 class="visually-hidden">Форма обратной связи</h2>
                 <p>Мы обязательно Вам ответим!</p>
-                <button aria-label="Закрыть">
+                <button aria-label="Закрыть"class="feedback-close">
                     <svg width="18px" height="17px">
                         <use xlink:href="#cross-big"/>
                     </svg>
                 </button>
                 <form action="#" method="post" class="feedback-form">
                     <label>
-                        <input type="text" name="feedback-name" id="feedback-name" class="text" required>
-                        <span class="feedback-name">Как вас зовут?</span>
+                        <input type="text" name="feedback-name" id="feedback-name" class="feedback-name text" required>
+                        <span>Как вас зовут?</span>
                     </label>
                     <label>
-                        <input type="email" name="feedback-email" id="feedback-email" class="text" required>
-                        <span class="feedback-email">Ваша почта для ответа?</span>
+                        <input type="email" name="feedback-email" id="feedback-email" class="feedback-email text" required>
+                        <span>Ваша почта для ответа?</span>
                     </label>
                     <label>
                         <textarea name="feedback-area" id="feedback-area" rows="10" class="feedback-area" required></textarea>
-                        <span class="feedback-text">Напишите что-нибудь...</span>
+                        <span>Напишите что-нибудь...</span>
                     </label>
                     <button type="submit" class="feedback-btn btn">Отправить</button>
                 </form>
