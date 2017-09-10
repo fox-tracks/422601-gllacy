@@ -40,9 +40,8 @@ var feedbackBlock = document.querySelector(".feedback-block");
 
     function onSubmit(evt) {
       if (!feedbackName.value || !feedbackEmail.value || !feedbackArea.value) {
-      evt.preventDefault();
-      feedbackBlock.classList.add("feedback-block-error");
-      console.log("Введите, пожалуйста, имя, e-mail и сообщение");
+        evt.preventDefault();
+        feedbackBlock.classList.add("feedback-block-error");
       }
     }
 
