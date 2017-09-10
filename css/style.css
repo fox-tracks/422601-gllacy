@@ -1282,19 +1282,19 @@ a.social-link:active {
 /* модальное окно*/
 @keyframes bounce {
     0% {
-      transform: translateY(-2000px);
+      transform: translate(-50%, -2000px);
     }
   
     70% {
-      transform: translateY(30px);
+      transform: translate(-50%, -20%);
     }
   
     90% {
-      transform: translateY(-10px);
+      transform: translate(-50%, -65%);
     }
   
     100% {
-      transform: translateY(0);
+      transform: translateY(-50%, -50%);
     }
 }
 @keyframes shake {
