@@ -894,7 +894,7 @@ td {
 }
 .filters-btn:active {
     border: none;
-    padding: 0 33px;
+    padding: 0 30px;
     background-color: rgb(237, 237, 237);
     box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
 }
