@@ -59,9 +59,15 @@ var i;
       }
     });
     function onInputChange(evt) {
-        alert("куку");
+      var input = evt.target;
+      if(input.value) {
+          input.classList.remove("text-empty");
+      } else {
+          input.classList.add("text-empty");
+      }
     }
 
    for (i = 0; i < textFields.length; i++) {
-       console.log(textFields[i]);
+       textFields[i].addEventListener("change", onInputChange);
    }
+
