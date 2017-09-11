@@ -1,6 +1,8 @@
 var myMap;
 var myPlacemark;
-ymaps.ready(init);
+if(window.ymaps){
+    ymaps.ready(init);
+}
 function init (){
     myMap = new ymaps.Map('map', {
         center: [59.939536, 30.329119],
@@ -27,6 +29,8 @@ var feedbackName = feedbackPopup.querySelector(".feedback-name");
 var feedbackEmail = feedbackPopup.querySelector(".feedback-email");
 var feedbackArea = feedbackPopup.querySelector(".feedback-area");
 var feedbackBlock = document.querySelector(".feedback-block");
+var textFields = document.querySelectorAll(".text");
+var i;
 
   feedbackLink.addEventListener("click", function(evt) {
     evt.preventDefault();
@@ -54,3 +58,10 @@ var feedbackBlock = document.querySelector(".feedback-block");
         }
       }
     });
+    function onInputChange(evt) {
+        alert("куку");
+    }
+
+   for (i = 0; i < textFields.length; i++) {
+       console.log(textFields[i]);
+   }
