@@ -512,7 +512,7 @@ header nav {
 }
 
 .text:focus + span,
-.text:valid + span,
+.text:not(.text-empty) + span,
 .feedback-area:focus + span,
 .feedback-area:valid + span {
     font-size: 11px;
@@ -523,7 +523,7 @@ header nav {
 .feedback-area:focus + span {
     color: rgba(91, 157, 223, 0.52);
 }
-.text:valid,
+.text:not(.text-empty),
 .feedback-area:valid {
     border: 1px solid rgba(178, 178, 178, 0.52);
 }
