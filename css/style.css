@@ -50,18 +50,22 @@ a.underline-all {
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 a.underline-all:hover,
+a.underline-all:focus,
 a.underline-all:active {
     color: rgb(255, 188, 158);
     border-bottom: 1px solid rgba(255, 188, 158, 0.32);
+    outline: none;
 }
 a.underline-white-bg{
     color: rgb(0, 0, 0);
     border-bottom: 1px solid rgba(0, 0, 0, 0.32);
 }
 a.underline-white-bg:hover,
+a.underline-white-bg:focus,
 a.underline-white-bg:active {
     color: rgb(232, 77, 55);
     border-bottom: 1px solid rgba(232, 77, 55, 0.32);
+    outline: none;
 }
 .subsection-title {
     margin: 0 0 20px 0;
@@ -115,6 +119,7 @@ a.underline-white-bg:active {
     background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
                       linear-gradient(0deg, rgb(231, 74, 53), rgb(242, 103, 65));
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
+    outline: none;
 }
 .btn:active {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), 
@@ -203,6 +208,7 @@ a.underline-white-bg:active {
 .slider label:hover,
 .slider label:focus {
     background-color: rgba(255, 255, 255, 0.4);
+    outline: none;
 }
 .check-slide:nth-of-type(1):checked ~.wrapper .label-green,
 .check-slide:nth-of-type(2):checked ~.wrapper .label-blue,
@@ -253,18 +259,20 @@ a.underline-white-bg:active {
 .main-nav-link.active {
     background-color: rgb(208, 112, 88);
 }
-.main-nav-link:hover {
+.main-nav-link:hover,
+.main-nav-link:focus {
     background-color: rgb(247, 246, 243);
     color: rgb(0, 0, 0);
+    outline: none;
 }
 .main-nav-link:hover .underline-main,
+.main-nav-link:focus .underline-main,
 .main-nav-link.active .underline-main {
     border: none;
 }
 .main-nav-link:active {
     background-color: rgb(237, 237, 237);
     box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
-
 }
 .main-nav-item:last-child {
     margin-right: 0;
@@ -309,8 +317,10 @@ a.underline-white-bg:active {
 .inner-menu li:first-child {
     margin: 0;
 }
-.inner-menu a:hover {
+.inner-menu a:hover,
+.inner-menu a:focus {
     background-color: rgb(251, 222, 215);
+    outline: none;
 }
 .inner-menu a:active {
     background-color: rgb(246, 181, 165);
@@ -409,14 +419,18 @@ li.login .btn {
 .action-menu-item path {
     fill: inherit;
 }
-.action-menu-link:hover use {
+.action-menu-link:hover use,
+.action-menu-link:focus use {
     fill: rgb(0, 0, 0);
 }
 .action-menu-link:hover, 
+.action-menu-link:focus,
 .action-menu-item .basket-with-items {
     color: rgb(0, 0, 0);
+    outline: none;
 }
-.action-menu-link:hover{
+.action-menu-link:hover,
+.action-menu-link:focus{
     background-color: rgb(248, 247, 244);
 }
 .action-menu .appearance {
@@ -508,13 +522,12 @@ li.login .btn {
     border: 1px solid rgba(178, 178, 178, 0.52);
     border-radius: 5px;
     margin-bottom: 25px;
+    padding-top: 8px;
 }
 .text:hover,
 .feedback-area:hover {
     border: 2px solid rgba(154, 154, 154, 0.52);
-}
-.feedback-area:hover {
-    padding-top: 9px;
+    outline: none;
 }
 .text:focus + span,
 .text:not(.text-empty) + span,
@@ -537,8 +550,8 @@ li.login .btn {
     border: 2px solid rgba(46, 136, 228, 0.52);
     outline: none;
 }
-
-.action-menu-item:hover > .appearance {
+.action-menu-item:hover > .appearance,
+.action-menu-item:focus > .appearance {
     display: block;
 }
 .subscription .btn {
@@ -781,8 +794,10 @@ p.basket-total {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     background-image: url("../img/select-arrow-black.svg");
+    outline: none;
 }
-.catalog-select:hover option {
+.catalog-select:hover option,
+.catalog-select:focus option {
     font-size: 14px;
     line-height: 16px;
 }
@@ -976,7 +991,7 @@ p.basket-total {
     border-radius: 5px;
     z-index: 1;
 }
-.catalog-item:nth-of-type(4n-3):hover {
+.catalog-item:nth-of-type(4n-3):hover  {
     margin-left: -1.1%;
 }
 .catalog-item:nth-of-type(4n):hover {
@@ -1018,8 +1033,10 @@ a.disabled svg{
 .paginator .prev {
     transform: rotate(180deg);
 }
-.paginator a:not(.disabled):hover {
+.paginator a:not(.disabled):hover,
+.paginator a:not(.disabled):focus {
     background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
 }
 a.next svg {
     fill: rgb(255, 255, 255);
@@ -1036,7 +1053,7 @@ a.next:active svg {
     border-radius: 12px;
     background: rgb(238, 225, 198) url("../img/wafer.jpg") repeat;
     color: rgb(0, 0, 0);
-    padding: 29px 23px 26px 23px; /*уточнить */
+    padding: 15px 23px 26px 23px; /*уточнить */
     margin-bottom: 40px;
 }
 .features p {
@@ -1208,6 +1225,8 @@ a.social-link {
     border: 3px solid rgba(255, 255, 255, 0.47);
     border-radius: 50%;
     display: block;
+    font-size: 0;
+    line-height: 0;
 }
 a.social-link svg {
     display: block;
@@ -1220,6 +1239,7 @@ a.social-link svg {
 a.social-link:hover,
 a.social-link:focus {
     border-color: rgb(218, 226, 222);
+    outline: none;
 }
 a.social-link:hover svg,
 a.social-link:focus svg {
