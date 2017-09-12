@@ -88,7 +88,8 @@ a.underline-white-bg:active {
 }
 .list,
 .list li,
-.layout-block p {
+.layout-block p,
+.feedback-block p {
     margin: 0;
     padding: 0;
 }
@@ -458,7 +459,8 @@ li.login .btn {
     font-size: 13px;
     line-height: 24px;   
 }
-.text {
+.text,
+.feedback-area {
     width: 100%;
     height: 44px;
     padding: 1px 1px 1px 15px;
@@ -468,6 +470,9 @@ li.login .btn {
     background-color: rgb(255, 255, 255);
     border: 1px solid rgba(178, 178, 178, 0.52);
     border-radius: 5px;
+}
+.feedback-block .text {
+    line-height: 40px;
 }
 .search .text {
     margin-bottom: 1px;
@@ -492,22 +497,25 @@ li.login .btn {
     line-height: 44px;
     color: rgba(153, 153, 153, 0.52);
     transition: 0.2s;
+    pointer-events: none;
 }
-.feedback-form textarea {
+.feedback-form .feedback-area {
     align-self: stretch;
     width: 100%;
     height: 155px;
     resize: none;
+    line-height: 24px;
     border: 1px solid rgba(178, 178, 178, 0.52);
     border-radius: 5px;
     margin-bottom: 25px;
-    padding: 10px 1px 1px 15px;
 }
 .text:hover,
 .feedback-area:hover {
     border: 2px solid rgba(154, 154, 154, 0.52);
 }
-
+.feedback-area:hover {
+    padding-top: 9px;
+}
 .text:focus + span,
 .text:not(.text-empty) + span,
 .feedback-area:focus + span,
@@ -526,10 +534,10 @@ li.login .btn {
 }
 .text:focus,
 .feedback-area:focus {
-    padding: 9px 0 0 14px;
     border: 2px solid rgba(46, 136, 228, 0.52);
     outline: none;
 }
+
 .action-menu-item:hover > .appearance {
     display: block;
 }
@@ -961,7 +969,7 @@ p.basket-total {
 }
 .catalog-item:hover {
     width: 25.548%;
-    margin: -10px 0 -44px 0;
+    margin: -10px 0 -48px 0;
     padding: 10px 1.1% 22px 1.1%;
     background-color: rgba(248, 247, 244, 0.2);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
