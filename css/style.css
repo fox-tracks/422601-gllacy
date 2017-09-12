@@ -68,7 +68,7 @@ a.underline-white-bg:active {
     outline: none;
 }
 .subsection-title {
-    margin: 0 0 20px 0;
+    margin: 0;
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
@@ -79,7 +79,7 @@ a.underline-white-bg:active {
     line-height: 22px;
     font-weight: 500;
     color: rgb(0, 0, 0);
-    padding-bottom: 2px;
+    padding-bottom: 4px;
 }
 .visually-hidden {
     position: absolute;
@@ -609,9 +609,8 @@ li.login .btn {
     display: flex;
     flex-direction: column;
     width: 48.9%;
-    min-height: 230px;
-    border-radius: 12px;
     min-height: 229px;
+    border-radius: 12px;
     padding: 14px 22px 23px 18px;
 }
 .bonus-confiture {
@@ -623,20 +622,28 @@ li.login .btn {
     z-index: 2;
     background: rgb(70, 42, 32) url("../img/chocolate.jpg") no-repeat bottom center;
 }
-.bonus .subsection-title {
-    margin-bottom: 14px;
+.bonus-confiture .subsection-title {
+    margin-bottom: 17px;
+}
+.bonus-chocolate .subsection-title {
+    margin-bottom: 15px;
 }
 .bonus p {
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
-    margin-bottom: 45px;
+    margin-bottom: 43px;
 }
 .bonus .btn,
 .subscription .btn {
     margin-top: auto;
     align-self: flex-end;
-    padding: 10px 20px 14px;
+}
+.bonus-confiture .btn {
+    padding: 9px 22px 13px 22px;
+}
+.bonus-chocolate .btn{
+    padding: 8px 19px 15px 23px;
 }
 /* хлебные крошки */
 .breadcrumbs {
@@ -851,7 +858,14 @@ p.basket-total {
 }
 .fatcontent-radiobtn,
 .fillers-checkbox {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 .fatcontent-label:not(:last-of-type) {
     margin-right: 15px;
@@ -1121,7 +1135,7 @@ li.thermopack{
     background: rgb(255, 255, 255) url("../img/strawberry.jpg") no-repeat center center;
     background-size: cover;
     margin: 0;
-    padding: 24px 0 0 19px;
+    padding: 22px 0 0 19px;
     background-position: top right;
 }
 .news-title a{
@@ -1146,17 +1160,20 @@ li.thermopack{
     min-height: 100%;
     background-color: rgb(248, 247, 244);
     border-radius: 12px;
-    padding: 30px 21px 31px 22px;
+    padding: 30px 21px 33px 22px;
     display: flex;
     flex-direction: column;
 }
 .subscription .btn {
+    width: 128px;
     font-family: "Roboto", "Tahoma", sans-serif;
+    padding: 8px 20px 14px 19px;
 }
 /* адресный блок */
 .map {
     position: relative; 
     background: url("../img/map.jpg") no-repeat center;
+    min-height: 428px;
 }
 .map ymaps {
     position: absolute;
@@ -1164,7 +1181,7 @@ li.thermopack{
     left: 0;
 }
 .map .layout-block {
-    padding: 62px 0;
+    padding: 61px 0 54px;
     z-index: 10;
     position: relative;
     pointer-events: none;
@@ -1175,7 +1192,7 @@ li.thermopack{
     width: 302px;
     min-height: 306px; 
     border-radius: 16px;
-    padding: 31px 25px;
+    padding: 31px 24px 31px 26px;
     margin: 0 2.3% 0 auto;
     font-size: 14px;
     line-height: 20px;
@@ -1188,7 +1205,7 @@ li.thermopack{
 .address p:last-of-type {
     font-size: 14px;
     line-height: 22px;
-    padding-bottom: 27px;
+    padding-bottom: 23px;
 }
 .address p.strong,
 .address a.tel {
@@ -1198,19 +1215,23 @@ li.thermopack{
 .address p.strong {
     max-width: 225px;
     line-height: 24px;
-    padding-bottom: 24px; 
+    padding-bottom: 19px; 
 }
 .address p:first-of-type {
      max-width: 150px;
 }
+.address .common-text {
+    padding-bottom: 5px;
+}
 .map a.btn {
     display: block;
-    padding: 10px 0;
+    padding: 8px 0 12px 0;
 }
 /* подвал */
 footer .additional-wrapper {
     display: flex;
-    padding-top: 18px;
+    justify-content: space-between;
+    padding-top: 15px;
     padding-bottom: 22px;
     align-items: center;
     position: relative;
@@ -1219,7 +1240,7 @@ footer .additional-wrapper {
     border-top: 1px solid rgba(255, 255, 255, 0.32);
 }
 .social-networks {
-    margin-top: 19px;
+    margin-top: 14px;
 }
 .social-networks-list {
     display: flex;
@@ -1265,7 +1286,7 @@ a.social-link:active {
     font-size: 13px;
     line-height: 18px;
     margin-top: 19px;
-    margin-left: auto;   
+    margin-right: 28px;   
 }
 .additional-links-list li:first-child {
     font-weight: 700;
@@ -1281,7 +1302,7 @@ a.social-link:active {
     margin-left: 29px;   
 }
 .additional-links-list li {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
 }
 .additional-links-list li:nth-child(2n-1) {
     flex-basis: 46%;
@@ -1305,7 +1326,9 @@ a.social-link:active {
 .academy {
     font-size: 12px;
     line-height: 18px;
-    margin-left: auto;
+}
+.academy a{
+    padding-left: 3px;
 }
 /* модальное окно*/
 @keyframes bounce {
