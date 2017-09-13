@@ -44,7 +44,10 @@ feedbackClose.addEventListener("click", function (evt) {
 function onSubmit(evt) {
     if (!feedbackName.value || !feedbackEmail.value || !feedbackArea.value) {
         evt.preventDefault();
-        feedbackBlock.classList.add("feedback-block-error");
+        feedbackBlock.classList.remove("feedback-block-error");
+        setTimeout(function() { 
+            feedbackBlock.classList.add("feedback-block-error"); 
+        }, 0);
     }
 }
 
