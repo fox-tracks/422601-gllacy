@@ -7,3 +7,6 @@
 js/
 | - script.js
 | - [другие *.js файлы]
+
+
+autoprefixer-cli .\css\style.css -o .\css\style.min.css

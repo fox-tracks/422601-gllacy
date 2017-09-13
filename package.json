@@ -1,0 +1,22 @@
+{
+  "name": "422601-gllacy",
+  "version": "1.0.0",
+  "description": "* Студент: [Татьяна  Андриянова](https://up.htmlacademy.ru/htmlcss/18/user/422601).\r * Наставник: [Максим Фарига](https://htmlacademy.ru/profile/maximfariga).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fox-tracks/422601-gllacy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fox-tracks/422601-gllacy/issues"
+  },
+  "homepage": "https://github.com/fox-tracks/422601-gllacy#readme",
+  "dependencies": {
+    "autoprefixer-cli": "^1.0.0"
+  }
+}
