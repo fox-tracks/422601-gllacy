@@ -380,7 +380,7 @@ li.basket > a {
     padding-left: 44px;
     padding-bottom: 7px;
 }
-.action-menu-item .basket-with-items {
+.action-menu-item.basket-with-items .basket-link{
     background-color: rgb(247, 246, 243);
 }
 li.search svg,
@@ -411,19 +411,27 @@ li.login svg {
 li.login .btn {
     height: 44px;
 }
-.action-menu-item use {
+.action-menu-item.login use,
+.action-menu-item.search use,
+.action-menu-item.basket-empty use {
     fill: white;
 }
-.action-menu-item path {
+.action-menu-item.login path,
+.action-menu-item.search path,
+.action-menu-item.basket-empty path {
     fill: inherit;
 }
-.action-menu-link:hover use,
-.action-menu-link:focus use {
+.action-menu-item:hover use,
+.action-menu-item.login:hover use,
+.action-menu-item.basket-empty:hover use,
+.action-menu-item.search:focus use,
+.action-menu-item.login:focus use,
+.action-menu-item.basket-empty:focus use {
     fill: rgb(0, 0, 0);
 }
 .action-menu-link:hover, 
 .action-menu-link:focus,
-.action-menu-item .basket-with-items {
+.action-menu-item.basket-with-items .basket-link{
     color: rgb(0, 0, 0);
     outline: none;
 }
