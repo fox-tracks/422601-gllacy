@@ -6,7 +6,7 @@ if (window.ymaps) {
 }
 function init() {
     myMap = new ymaps.Map("map", {
-        center: [59.939536, 30.329119],
+        center: [59.939306, 30.329419],
         zoom: 16,
         controls: []
     });
