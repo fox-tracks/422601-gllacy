@@ -262,8 +262,8 @@ a.underline-white-bg:active {
 .main-nav-link.active {
     background-color: rgb(208, 112, 88);
 }
-.main-nav-link:hover,
-.main-nav-link:focus {
+.main-nav-item:hover > .main-nav-link,
+.main-nav-item:focus > .main-nav-link {
     color: rgb(0, 0, 0);
     background-color: rgb(247, 246, 243);
     outline: none;
@@ -438,14 +438,14 @@ li.login .btn {
 .action-menu-item.basket-empty:focus use {
     fill: rgb(0, 0, 0);
 }
-.action-menu-link:hover, 
-.action-menu-link:focus,
+.action-menu-item:hover > .action-menu-link, 
+.action-menu-item:focus > action-menu-link,
 .action-menu-item.basket-with-items .basket-link {
     color: rgb(0, 0, 0);
     outline: none;
 }
-.action-menu-link:hover,
-.action-menu-link:focus {
+.action-menu-item:hover > .action-menu-link, 
+.action-menu-item:focus > action-menu-link {
     background-color: rgb(248, 247, 244);
 }
 .action-menu .appearance {
@@ -1020,10 +1020,12 @@ p.basket-total {
     font-size: 30px;
     line-height: 45px;
     font-weight: 700;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 .item-price svg {
     margin-bottom: -5px;
     margin-left: 3px;
+    filter: drop-shadow(0 1px 3px rgba(49, 50, 53, 0.5));
 }
 .item-price span {
     font-size: 45px;
